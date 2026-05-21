@@ -522,11 +522,11 @@
     <li><a href="#sec-1">Saldo</a></li>
     <li><a href="#sec-2">Mercados</a></li>
     <li><a href="#sec-3">Influência</a></li>
-    <li><a href="#sec-4">poder — A Quantidade Conservada</a></li>
+    <li><a href="#sec-4">Poder — A Quantidade Conservada</a></li>
     <li><a href="#sec-5">Governança</a></li>
     <li><a href="#sec-6">A Mecânica em Movimento — Um Exemplo Trabalhado</a></li>
     <li><a href="#sec-7">Simulação Estendida — O Mercado do Projeto de Infraestrutura</a></li>
-    <li><a href="#sec-8">Conservação do poder — Prova Formal</a></li>
+    <li><a href="#sec-8">Conservação do Poder — Prova Formal</a></li>
     <li><a href="#sec-9">Resumo</a></li>
   </ol>
 </div>
@@ -625,26 +625,26 @@ $$I_t^{\text{taker}} = \nabla C(\mathbf{q}_m) \cdot \mathbf{q}_t$$
 <p>A influência total é a soma sobre todos os mercados ativos dos quais a pessoa participa. A influência é <strong>dinâmica</strong> — ela flutua à medida que outros tomam posições e deslocam as probabilidades implícitas. Um tomador cujo resultado se torna mais provável vê sua influência subir. Um tomador num resultado menos favorecido a vê cair. Essa flutuação não é ruído. É a reprecificação contínua da crença comprometida pelo mercado, e começa no momento em que uma posição é adquirida — não antes.</p>
 
 <!-- Seção IV -->
-<h2 id="sec-4"><span class="roman">IV</span>poder — A Quantidade Conservada</h2>
+<h2 id="sec-4"><span class="roman">IV</span>Poder — A Quantidade Conservada</h2>
 
-<p>A lei mais fundamental no Probabilize é a conservação da <strong>poder</strong>:</p>
+<p>A lei mais fundamental no Probabilize é a conservação do <strong>Poder</strong>:</p>
 
 <div class="axiom">
   <div class="axiom-label">Lei de Conservação</div>
   $$R = B + I$$
 </div>
 
-<p>poder é a soma de saldo e influência. Enunciar a lei de conservação com plena precisão exige uma taxonomia cuidadosa das três operações — porque elas diferem não apenas em seu conteúdo econômico, mas em seu escopo, em seu efeito sobre o poder individual e em sua relação com a história de cada participante.</p>
+<p>Poder é a soma de saldo e influência. Enunciar a lei de conservação com plena precisão exige uma taxonomia cuidadosa das três operações — porque elas diferem não apenas em seu conteúdo econômico, mas em seu escopo, em seu efeito sobre o poder individual e em sua relação com a história de cada participante.</p>
 
 <p><strong>Make</strong> é pessoal tanto em escopo quanto em efeito. Apenas o criador está envolvido. O criador paga \(L\) do saldo e ganha exatamente \(L\) em influência. Nenhum outro participante existe nesta operação.</p>
 
 $$\Delta R_m = 0 \quad \text{(somente o criador; os demais inalterados)}$$
 
-<p><strong>Unmake</strong> é social em escopo, mas pessoal em efeito. O criador o inicia unilateralmente, mas converte a influência de todo participante simultaneamente — cada um individualmente, à taxa uniforme \(\nabla C(\mathbf{q}_m)\). Para cada participante \(i\): \(\Delta B_i = +I_i\), \(\Delta I_i = -I_i\), \(\Delta R_i = 0\). Nenhuma poder migra entre participantes. A influência total no mercado atinge zero como consequência dessas conversões individuais — não como evento independente, mas como o que sobra quando a influência de cada participante foi exatamente convertida em saldo e nada resta a ser detido.</p>
+<p><strong>Unmake</strong> é social em escopo, mas pessoal em efeito. O criador o inicia unilateralmente, mas converte a influência de todo participante simultaneamente — cada um individualmente, à taxa uniforme \(\nabla C(\mathbf{q}_m)\). Para cada participante \(i\): \(\Delta B_i = +I_i\), \(\Delta I_i = -I_i\), \(\Delta R_i = 0\). Nenhum poder migra entre participantes. A influência total no mercado atinge zero como consequência dessas conversões individuais — não como evento independente, mas como o que sobra quando a influência de cada participante foi exatamente convertida em saldo e nada resta a ser detido.</p>
 
 <p>Esse caráter pessoal do Unmake tem base temporal precisa. Antes de um tomador entrar no mercado, sua posição é \(\mathbf{q}_t = \mathbf{0}\). Cada Take ocorrido antes de sua entrada deslocou \(\nabla C\) — mas, aplicado a uma posição zero, todos esses deslocamentos o deixam completamente inafetado. A exposição começa no momento em que ele compromete capital e termina no Unmake. A história prévia do mercado é constitucionalmente irrelevante para sua liquidação.</p>
 
-<p><strong>Take</strong> é social tanto em escopo quanto em efeito. Uma negociação reprecifica simultaneamente as posições de todos os participantes do mercado. os poderes individuais se deslocam. Sua soma, não.</p>
+<p><strong>Take</strong> é social tanto em escopo quanto em efeito. Uma negociação reprecifica simultaneamente as posições de todos os participantes do mercado. Os poderes individuais se deslocam. Sua soma, não.</p>
 
 $$\Delta R_i \neq 0 \text{ em geral}, \quad \text{mas} \quad \sum_i \Delta R_i = 0 \quad \text{sempre}$$
 
@@ -667,7 +667,7 @@ $$\underbrace{\text{Pagar } \Delta C}_{\text{Take: saldo cai}} \;\longrightarrow
 
 <p>Take é a única operação na qual o poder <strong>cruza entre participantes</strong>. Make cria a arena. Unmake a dissolve — convertendo a influência de cada participante individualmente em saldo, com o total atingindo zero como consequência dessa perfeição individual. Take é onde a verdadeira disputa epistêmica e econômica ocorre.</p>
 
-<p><strong>o poder total não é criada nem destruída.</strong> O total no sistema em qualquer momento é igual ao número total de cidadãos — porque cada pessoa começa com \(R = 1\) e nenhuma operação viola a conservação no nível do sistema. Esta é a <strong>garantia constitucional</strong> de que o Probabilize não é uma máquina de inflação ou extração. Nenhuma autoridade pode conjurar credibilidade. Nenhum participante pode adquirir influência sem abrir mão de quantidade igual de saldo. Todo valor que entra num mercado deve eventualmente sair dele.</p>
+<p><strong>o poder total não é criado nem destruído.</strong> O total no sistema em qualquer momento é igual ao número total de cidadãos — porque cada pessoa começa com \(R = 1\) e nenhuma operação viola a conservação no nível do sistema. Esta é a <strong>garantia constitucional</strong> de que o Probabilize não é uma máquina de inflação ou extração. Nenhuma autoridade pode conjurar credibilidade. Nenhum participante pode adquirir influência sem abrir mão de quantidade igual de saldo. Todo valor que entra num mercado deve eventualmente sair dele.</p>
 
 <!-- Seção V -->
 <h2 id="sec-5"><span class="roman">V</span>Governança</h2>
@@ -768,7 +768,7 @@ $$B_B \leftarrow 1{,}0000 - 0{,}7877 = \mathbf{0{,}2123}$$
 $$\pi_1 = \frac{0{,}6 \cdot e^2}{4{,}8335} = \frac{4{,}4335}{4{,}8335} = \mathbf{0{,}9173} \quad (91{,}73\%)$$
 $$\pi_2 = \frac{0{,}4}{4{,}8335} = \mathbf{0{,}0827} \quad (8{,}27\%)$$
 
-<p>O capital comprometido de Bob elevou a probabilidade implícita de "Sim" de <strong>60% para 91,73%</strong>. Take é social em escopo e efeito: o deslocamento do gradiente reprecifica a posição de criadora de Alice para baixo, transferindo poder para Bob sem que Alice transacione. Bob pagou \(0{,}7877\); sua posição vale agora \(\nabla C(1,0) \cdot (1,0) = 0{,}9173\). Sua deriva de poder no próprio Take é \(\Delta R_B^{\text{own}} = -0{,}7877 + 0{,}9173 = +0{,}1296\), retirada de Alice, cuja influência de criadora caiu correspondentemente.</p>
+<p>O capital comprometido de Bob elevou a probabilidade implícita de "Sim" de <strong>60% para 91,73%</strong>. Take é social em escopo e efeito: o deslocamento do gradiente reprecifica a posição de criadora de Alice para baixo, transferindo poder para Bob sem que Alice transacione. Bob pagou \(0{,}7877\); sua posição vale agora \(\nabla C(1,0) \cdot (1,0) = 0{,}9173\). Sua deriva de poder no próprio Take é \(\Delta R_B^{\text{own}} = -0{,}7877 + 0{,}9173 = +0{,}1296\), retirado de Alice, cuja influência de criadora caiu correspondentemente.</p>
 
 <div class="phase">
   <div class="phase-tag">Passo 3</div>
@@ -806,7 +806,7 @@ $$B_C \leftarrow 0{,}7877 + 0{,}4000 = \mathbf{1{,}1877}$$
 
 $$\text{Total: } 1{,}0000 + 0{,}8123 + 1{,}1877 = \mathbf{3{,}0000} \checkmark$$
 
-<h3>Livro-razão da Conservação do poder</h3>
+<h3>Livro-razão da Conservação do Poder</h3>
 
 <div class="ledger-wrap">
 <table>
@@ -836,7 +836,7 @@ $$\text{Total: } 1{,}0000 + 0{,}8123 + 1{,}1877 = \mathbf{3{,}0000} \checkmark$$
 </div>
 
 <div class="pullquote">
-  o poder flui em direção àqueles cujas crenças são confirmadas pela atividade subsequente do mercado — e flui inteiramente através do Take.
+  O poder flui em direção àqueles cujas crenças são confirmadas pela atividade subsequente do mercado — e flui inteiramente através do Take.
 </div>
 
 <div class="ornament">◆ ◆ ◆</div>
@@ -864,7 +864,7 @@ $$\text{Total: } 1{,}0000 + 0{,}8123 + 1{,}1877 = \mathbf{3{,}0000} \checkmark$$
 </table>
 </div>
 
-<p><strong>poder inicial total:</strong> \(R_{\text{total}} = 4{,}0000\). Essa quantidade é constitucionalmente conservada. Cada passo abaixo deve retornar a ela.</p>
+<p><strong>Poder inicial total:</strong> \(R_{\text{total}} = 4{,}0000\). Essa quantidade é constitucionalmente conservada. Cada passo abaixo deve retornar a ela.</p>
 
 <div class="phase">
   <div class="phase-tag">Fase I</div>
@@ -895,7 +895,7 @@ $$\Delta C_{\text{Bob}} = \mathbf{0{,}5231}, \qquad B_B \leftarrow 1{,}0000 - 0{
 
 $$\pi_1 = \mathbf{0{,}6444}, \qquad \pi_2 = \mathbf{0{,}3556}$$
 
-<p>Bob pagou \(0{,}5231\); sua posição vale imediatamente \(0{,}6444\). Sua deriva de poder no próprio Take: \(\Delta R_B^{\text{own}} = -0{,}5231 + 0{,}6444 = +0{,}1213\), originada da posição de criadora de Alice reprecificada. A influência de criadora de Alice é agora \(1{,}4394 - 0{,}6444 = 0{,}7950\), e sua poder caiu para \(0{,}0837 + 0{,}7950 = 0{,}8787\).</p>
+<p>Bob pagou \(0{,}5231\); sua posição vale imediatamente \(0{,}6444\). Sua deriva de poder no próprio Take: \(\Delta R_B^{\text{own}} = -0{,}5231 + 0{,}6444 = +0{,}1213\), originado da posição de criadora de Alice reprecificada. A influência de criadora de Alice é agora \(1{,}4394 - 0{,}6444 = 0{,}7950\), e seu poder caiu para \(0{,}0837 + 0{,}7950 = 0{,}8787\).</p>
 
 <div class="table-wrap">
 <table>
@@ -928,7 +928,7 @@ $$\Delta C_{\text{Carol}} = \mathbf{0{,}4769}, \qquad B_C \leftarrow 1{,}0000 - 
 
 $$\pi_1 = \mathbf{0{,}4000}, \qquad \pi_2 = \mathbf{0{,}6000}$$
 
-<p>Carol entrou no estado \((1,0)\). A história prévia do mercado não é sua herança. Ela pagou \(0{,}4769\) por uma posição que vale imediatamente \(0{,}6000\): \(\Delta R_C^{\text{own}} = -0{,}4769 + 0{,}6000 = +0{,}1231\), originada de Bob, cuja posição caiu de \(0{,}6444\) para \(0{,}4000\). O mercado retorna exatamente ao prior, e a influência de criadora de Alice é restaurada para \(1{,}9163 - 1{,}0000 = 0{,}9163 = L\), com sua poder recuperando-se totalmente para \(1{,}0000\).</p>
+<p>Carol entrou no estado \((1,0)\). A história prévia do mercado não é sua herança. Ela pagou \(0{,}4769\) por uma posição que vale imediatamente \(0{,}6000\): \(\Delta R_C^{\text{own}} = -0{,}4769 + 0{,}6000 = +0{,}1231\), originada de Bob, cuja posição caiu de \(0{,}6444\) para \(0{,}4000\). O mercado retorna exatamente ao prior, e a influência de criadora de Alice é restaurada para \(1{,}9163 - 1{,}0000 = 0{,}9163 = L\), com seu poder recuperando-se totalmente para \(1{,}0000\).</p>
 
 <div class="table-wrap">
 <table>
@@ -1131,7 +1131,7 @@ $$B_A \leftarrow 0{,}0837 + 0{,}7950 = \mathbf{0{,}8787}, \qquad B_B \leftarrow 
 </table>
 </div>
 
-<p>A entrada de Carol foi constitucionalmente necessária para que Alice recuperasse sua poder inicial. Sem ela, Alice arca com o custo total da negociação informada de Bob. Isso não é um defeito — é o mecanismo de subsídio tornado visível no livro-razão. A perda esperada do criador é o preço da infraestrutura. A participação de Carol é o que aconteceu de cancelá-la nesse caso. O sistema não garante esse cancelamento. Apenas garante a conservação.</p>
+<p>A entrada de Carol foi constitucionalmente necessária para que Alice recuperasse seu poder inicial. Sem ela, Alice arca com o custo total da negociação informada de Bob. Isso não é um defeito — é o mecanismo de subsídio tornado visível no livro-razão. A perda esperada do criador é o preço da infraestrutura. A participação de Carol é o que aconteceu de cancelá-la nesse caso. O sistema não garante esse cancelamento. Apenas garante a conservação.</p>
 
 <p>O parâmetro de liquidez \(b\) é um dial direto sobre o tradeoff entre <strong>profundidade do mercado</strong> e <strong>exposição do criador</strong>: \(b\) maior significa mais capital em risco por unidade de deslocamento de probabilidade, e um mercado mais difícil para qualquer tomador isolado mover.</p>
 
@@ -1161,7 +1161,7 @@ $$B_A \leftarrow 0{,}0837 + 0{,}7950 = \mathbf{0{,}8787}, \qquad B_B \leftarrow 
 <div class="ornament">◆ ◆ ◆</div>
 
 <!-- Seção VIII -->
-<h2 id="sec-8"><span class="roman">VIII</span>Conservação do poder — Prova Formal</h2>
+<h2 id="sec-8"><span class="roman">VIII</span>Conservação do Poder — Prova Formal</h2>
 
 <p>As simulações anteriores verificaram a conservação numericamente, passo a passo. O que se segue eleva essa verificação a uma prova — estabelecendo que a conservação se mantém para cada execução possível de cada operação possível, caracterizando precisamente os efeitos individuais e sistêmicos de cada operação, e dando uma explicação rigorosa do limite temporal que governa a exposição de cada tomador.</p>
 
@@ -1204,7 +1204,7 @@ $$\Delta B_m = +[C(\mathbf{q}_m) - \nabla C(\mathbf{q}_m) \cdot \mathbf{q}_m], \
 
 $$\Delta B_t = +\nabla C(\mathbf{q}_m) \cdot \mathbf{q}_t, \quad \Delta I_t = -\nabla C(\mathbf{q}_m) \cdot \mathbf{q}_t, \quad \Delta R_t = 0$$
 
-<p>O evento primário é \(\Delta R_i = 0\) para cada \(i\). A consequência secundária é \(I_{\text{tot}} = 0\): nenhum participante retém influência num mercado fechado, então nenhuma sobra. Nenhuma poder cruza entre participantes. O corolário confirma que o saldo total ganho é igual a \(C(\mathbf{q}_m)\) e a influência total perdida é igual a \(C(\mathbf{q}_m)\) — uma verificação global que decorre da conservação individual, não de mecanismo separado.</p>
+<p>O evento primário é \(\Delta R_i = 0\) para cada \(i\). A consequência secundária é \(I_{\text{tot}} = 0\): nenhum participante retém influência num mercado fechado, então nenhuma sobra. Nenhum poder cruza entre participantes. O corolário confirma que o saldo total ganho é igual a \(C(\mathbf{q}_m)\) e a influência total perdida é igual a \(C(\mathbf{q}_m)\) — uma verificação global que decorre da conservação individual, não de mecanismo separado.</p>
 
 <p><strong>A decomposição temporal da discrepância de liquidação.</strong> Para o tomador \(t\) que adquiriu posição \(\mathbf{q}_t\) no estado de mercado \(\mathbf{q}_{\text{old}} \to \mathbf{q}_{\text{new}} = \mathbf{q}_{\text{old}} + \mathbf{q}_t\), pagando \(\Delta C = C(\mathbf{q}_{\text{new}}) - C(\mathbf{q}_{\text{old}})\), a discrepância entre pagamento e recebimento se decompõe como:</p>
 
@@ -1288,7 +1288,7 @@ $$\sum_i \Delta R_i = 0 \quad \checkmark$$
     <tr><td><strong>Take</strong></td><td>Compra uma posição; única operação que redistribui poder entre participantes; exposição começa na entrada; preço depende do estado atual do mercado</td></tr>
     <tr><td><strong>Unmake</strong></td><td>Encerra um mercado; conversão pessoal \(I \to B\) para todos simultaneamente — liquidação a preços correntes; \(I_{\text{tot}}\) atinge zero como consequência da conservação individual</td></tr>
     <tr><td><strong>Influência</strong></td><td>Valor do seu capital implantado a preços correntes de mercado</td></tr>
-    <tr><td><strong>poder</strong></td><td>\(B + I\) — conservada no nível do sistema; redistribuída entre indivíduos somente por Take; conservada individualmente por Make e Unmake</td></tr>
+    <tr><td><strong>Poder</strong></td><td>\(B + I\) — conservado no nível do sistema; redistribuído entre indivíduos somente por Take; conservado individualmente por Make e Unmake</td></tr>
     <tr><td><strong>Governança</strong></td><td>Decisões amostradas das probabilidades implícitas no mercado, ponderadas pela credibilidade</td></tr>
   </tbody>
 </table>
