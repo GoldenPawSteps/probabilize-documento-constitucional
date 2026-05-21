@@ -600,7 +600,7 @@ $$B_m \leftarrow B_m + C(\mathbf{q}_m) - \nabla C(\mathbf{q}_m) \cdot \mathbf{q}
 $$B_t \leftarrow B_t + \nabla C(\mathbf{q}_m) \cdot \mathbf{q}_t$$
 
 <div class="pullquote">
-  <strong>Unmake é liquidação aos preços correntes, não reembolso ao custo.</strong> O que cada participante recebe não é o que originalmente pagou. A operação converte a influência de cada participante em saldo, individualmente e simultaneamente, à taxa uniforme \(\nabla C(\mathbf{q}_m)\). Para cada participante, \(\Delta B_i = +I_i\) e \(\Delta I_i = -I_i\), de modo que \(\Delta R_i = 0\) exatamente. A influência total no mercado atinge zero como consequência dessas conversões individuais — porque nenhum participante retém qualquer influência em um mercado encerrado, e não sobra nenhuma influência. Isso não é aposentadoria nem destruição; é o resíduo da conservação individual perfeita aplicada simultaneamente a todos.
+  <strong>Unmake é liquidação aos preços correntes, não reembolso ao custo.</strong> O que cada participante recebe não é o que originalmente pagou. A operação converte a influência de cada participante em saldo, individualmente e simultaneamente, à taxa uniforme \(\nabla C(\mathbf{q}_m)\). Para cada participante, \(\Delta B_i = +I_i\) e \(\Delta I_i = -I_i\), de modo que \(\Delta P_i = 0\) exatamente. A influência total no mercado atinge zero como consequência dessas conversões individuais — porque nenhum participante retém qualquer influência em um mercado encerrado, e não sobra nenhuma influência. Isso não é aposentadoria nem destruição; é o resíduo da conservação individual perfeita aplicada simultaneamente a todos.
 </div>
 
 <p>Para um tomador que adquiriu a posição \(\mathbf{q}_t\) no estado de mercado \(\mathbf{q}_{\text{old}}\), pagando \(\Delta C = C(\mathbf{q}_{\text{new}}) - C(\mathbf{q}_{\text{old}})\), a discrepância entre pagamento e recebimento se decompõe precisamente ao longo de linhas temporais: é zero para toda a atividade do mercado anterior à entrada do tomador (porque ele não detinha posição), gerada parcialmente em seu próprio Take, e completada por cada negociação subsequente que reprecificou sua posição. O Unmake não cria essa discrepância, não a corrige nem a distribui entre participantes. Ele a cristaliza, convertendo o que quer que a contagem final venha a ser, de influência em saldo.</p>
@@ -631,22 +631,22 @@ $$I_t^{\text{taker}} = \nabla C(\mathbf{q}_m) \cdot \mathbf{q}_t$$
 
 <div class="axiom">
   <div class="axiom-label">Lei de Conservação</div>
-  $$R = B + I$$
+  $$P = B + I$$
 </div>
 
 <p>Poder é a soma de saldo e influência. Enunciar a lei de conservação com plena precisão exige uma taxonomia cuidadosa das três operações — porque elas diferem não apenas em seu conteúdo econômico, mas em seu escopo, em seu efeito sobre o poder individual e em sua relação com a história de cada participante.</p>
 
 <p><strong>Make</strong> é pessoal tanto em escopo quanto em efeito. Apenas o criador está envolvido. O criador paga \(L\) do saldo e ganha exatamente \(L\) em influência. Nenhum outro participante existe nesta operação.</p>
 
-$$\Delta R_m = 0 \quad \text{(somente o criador; os demais inalterados)}$$
+$$\Delta P_m = 0 \quad \text{(somente o criador; os demais inalterados)}$$
 
-<p><strong>Unmake</strong> é social em escopo, mas pessoal em efeito. O criador o inicia unilateralmente, mas converte a influência de todo participante simultaneamente — cada um individualmente, à taxa uniforme \(\nabla C(\mathbf{q}_m)\). Para cada participante \(i\): \(\Delta B_i = +I_i\), \(\Delta I_i = -I_i\), \(\Delta R_i = 0\). Nenhum poder migra entre participantes. A influência total no mercado atinge zero como consequência dessas conversões individuais — não como evento independente, mas como o que sobra quando a influência de cada participante foi exatamente convertida em saldo e nada resta a ser detido.</p>
+<p><strong>Unmake</strong> é social em escopo, mas pessoal em efeito. O criador o inicia unilateralmente, mas converte a influência de todo participante simultaneamente — cada um individualmente, à taxa uniforme \(\nabla C(\mathbf{q}_m)\). Para cada participante \(i\): \(\Delta B_i = +I_i\), \(\Delta I_i = -I_i\), \(\Delta P_i = 0\). Nenhum poder migra entre participantes. A influência total no mercado atinge zero como consequência dessas conversões individuais — não como evento independente, mas como o que sobra quando a influência de cada participante foi exatamente convertida em saldo e nada resta a ser detido.</p>
 
 <p>Esse caráter pessoal do Unmake tem base temporal precisa. Antes de um tomador entrar no mercado, sua posição é \(\mathbf{q}_t = \mathbf{0}\). Cada Take ocorrido antes de sua entrada deslocou \(\nabla C\) — mas, aplicado a uma posição zero, todos esses deslocamentos o deixam completamente inafetado. A exposição começa no momento em que ele compromete capital e termina no Unmake. A história prévia do mercado é constitucionalmente irrelevante para sua liquidação.</p>
 
 <p><strong>Take</strong> é social tanto em escopo quanto em efeito. Uma negociação reprecifica simultaneamente as posições de todos os participantes do mercado. Os poderes individuais se deslocam. Sua soma, não.</p>
 
-$$\Delta R_i \neq 0 \text{ em geral}, \quad \text{mas} \quad \sum_i \Delta R_i = 0 \quad \text{sempre}$$
+$$\Delta P_i \neq 0 \text{ em geral}, \quad \text{mas} \quad \sum_i \Delta P_i = 0 \quad \text{sempre}$$
 
 <p>O ciclo de vida de uma posição torna isso concreto:</p>
 
@@ -655,7 +655,7 @@ $$\underbrace{\text{Pagar } \Delta C}_{\text{Take: saldo cai}} \;\longrightarrow
 <div class="table-wrap">
 <table>
   <thead>
-    <tr><th>Operação</th><th>Escopo</th><th>\(\Delta R_i\) Individual</th><th>\(\Delta R\) do Sistema</th><th>Mecanismo</th></tr>
+    <tr><th>Operação</th><th>Escopo</th><th>\(\Delta P_i\) Individual</th><th>\(\Delta P\) do Sistema</th><th>Mecanismo</th></tr>
   </thead>
   <tbody>
     <tr><td><strong>Make</strong></td><td>Pessoal</td><td>\(0\) para o criador; demais inalterados</td><td class="num zero">\(0\)</td><td>Conversão pessoal \(B \to I\)</td></tr>
@@ -667,7 +667,7 @@ $$\underbrace{\text{Pagar } \Delta C}_{\text{Take: saldo cai}} \;\longrightarrow
 
 <p>Take é a única operação na qual o poder <strong>cruza entre participantes</strong>. Make cria a arena. Unmake a dissolve — convertendo a influência de cada participante individualmente em saldo, com o total atingindo zero como consequência dessa perfeição individual. Take é onde a verdadeira disputa epistêmica e econômica ocorre.</p>
 
-<p><strong>O poder total não é criado nem destruído.</strong> O total no sistema em qualquer momento é igual ao número total de cidadãos — porque cada pessoa começa com \(R = 1\) e nenhuma operação viola a conservação no nível do sistema. Esta é a <strong>garantia constitucional</strong> de que o Probabilize não é uma máquina de inflação ou extração. Nenhuma autoridade pode conjurar credibilidade. Nenhum participante pode adquirir influência sem abrir mão de quantidade igual de saldo. Todo valor que entra num mercado deve eventualmente sair dele.</p>
+<p><strong>O poder total não é criado nem destruído.</strong> O total no sistema em qualquer momento é igual ao número total de cidadãos — porque cada pessoa começa com \(P = 1\) e nenhuma operação viola a conservação no nível do sistema. Esta é a <strong>garantia constitucional</strong> de que o Probabilize não é uma máquina de inflação ou extração. Nenhuma autoridade pode conjurar credibilidade. Nenhum participante pode adquirir influência sem abrir mão de quantidade igual de saldo. Todo valor que entra num mercado deve eventualmente sair dele.</p>
 
 <!-- Seção V -->
 <h2 id="sec-5"><span class="roman">V</span>Governança</h2>
@@ -729,7 +729,7 @@ $$B_A \leftarrow 1{,}0000 - 0{,}4581 = \mathbf{0{,}5419}$$
 
 $$C(0,0) = 0{,}4581 + 0{,}5 \cdot \ln\!\left(0{,}6 \cdot e^0 + 0{,}4 \cdot e^0\right) = 0{,}4581 + 0{,}5 \cdot \ln(1) = \mathbf{0{,}4581}$$
 
-<p>Make é pessoal em escopo e efeito. Alice paga \(L\) do saldo e ganha \(L\) em influência: \(\Delta B_A = -L\), \(\Delta I_A = +L\), \(\Delta R_A = 0\). Bob e Carol não existem dentro desta operação.</p>
+<p>Make é pessoal em escopo e efeito. Alice paga \(L\) do saldo e ganha \(L\) em influência: \(\Delta B_A = -L\), \(\Delta I_A = +L\), \(\Delta P_A = 0\). Bob e Carol não existem dentro desta operação.</p>
 
 <div class="phase">
   <div class="phase-tag">Passo 2</div>
@@ -768,7 +768,7 @@ $$B_B \leftarrow 1{,}0000 - 0{,}7877 = \mathbf{0{,}2123}$$
 $$\pi_1 = \frac{0{,}6 \cdot e^2}{4{,}8335} = \frac{4{,}4335}{4{,}8335} = \mathbf{0{,}9173} \quad (91{,}73\%)$$
 $$\pi_2 = \frac{0{,}4}{4{,}8335} = \mathbf{0{,}0827} \quad (8{,}27\%)$$
 
-<p>O capital comprometido de Bob elevou a probabilidade implícita de "Sim" de <strong>60% para 91,73%</strong>. Take é social em escopo e efeito: o deslocamento do gradiente reprecifica a posição de criadora de Alice para baixo, transferindo poder para Bob sem que Alice transacione. Bob pagou \(0{,}7877\); sua posição vale agora \(\nabla C(1,0) \cdot (1,0) = 0{,}9173\). Sua deriva de poder no próprio Take é \(\Delta R_B^{\text{own}} = -0{,}7877 + 0{,}9173 = +0{,}1296\), retirado de Alice, cuja influência de criadora caiu correspondentemente.</p>
+<p>O capital comprometido de Bob elevou a probabilidade implícita de "Sim" de <strong>60% para 91,73%</strong>. Take é social em escopo e efeito: o deslocamento do gradiente reprecifica a posição de criadora de Alice para baixo, transferindo poder para Bob sem que Alice transacione. Bob pagou \(0{,}7877\); sua posição vale agora \(\nabla C(1,0) \cdot (1,0) = 0{,}9173\). Sua deriva de poder no próprio Take é \(\Delta P_B^{\text{own}} = -0{,}7877 + 0{,}9173 = +0{,}1296\), retirado de Alice, cuja influência de criadora caiu correspondentemente.</p>
 
 <div class="phase">
   <div class="phase-tag">Passo 3</div>
@@ -781,7 +781,7 @@ $$C(1,1) = 0{,}4581 + 0{,}5 \cdot \ln\!\left(e^2 \cdot (0{,}6 + 0{,}4)\right) = 
 
 <p><strong>Custo da negociação de Carol:</strong> \(\Delta C_C = 1{,}4581 - 1{,}2458 = \mathbf{0{,}2123}\)</p>
 
-<p>Carol gasta apenas \(0{,}2123\) para adquirir 1 unidade de \(\omega_2\) — a mesma quantidade que Bob adquiriu de \(\omega_1\) por \(0{,}7877\). Carol entrou no estado \((1,0)\) — não em \((0,0)\). A história prévia do mercado, incluindo a distorção de Bob para 91,73%, não é sua herança. Ela pagou \(0{,}2123\) por uma posição que vale imediatamente \(\nabla C(1,1) \cdot (0,1) = 0{,}4000\): sua deriva no próprio Take é \(\Delta R_C^{\text{own}} = -0{,}2123 + 0{,}4000 = +0{,}1877\), originada de Bob, cuja posição caiu de \(0{,}9173\) para \(0{,}6000\) à medida que o gradiente foi restaurado.</p>
+<p>Carol gasta apenas \(0{,}2123\) para adquirir 1 unidade de \(\omega_2\) — a mesma quantidade que Bob adquiriu de \(\omega_1\) por \(0{,}7877\). Carol entrou no estado \((1,0)\) — não em \((0,0)\). A história prévia do mercado, incluindo a distorção de Bob para 91,73%, não é sua herança. Ela pagou \(0{,}2123\) por uma posição que vale imediatamente \(\nabla C(1,1) \cdot (0,1) = 0{,}4000\): sua deriva no próprio Take é \(\Delta P_C^{\text{own}} = -0{,}2123 + 0{,}4000 = +0{,}1877\), originada de Bob, cuja posição caiu de \(0{,}9173\) para \(0{,}6000\) à medida que o gradiente foi restaurado.</p>
 
 $$B_C \leftarrow 1{,}0000 - 0{,}2123 = \mathbf{0{,}7877}$$
 
@@ -796,7 +796,7 @@ $$\pi_1 = \frac{0{,}6 \cdot e^2}{e^2} = \mathbf{0{,}6000}, \qquad \pi_2 = \frac{
   <h3>Alice Encerra o Mercado</h3>
 </div>
 
-<p>Alice fecha o mercado no estado final \(\mathbf{q}_m = (1,1)\), \(\nabla C = (0{,}6000,\ 0{,}4000)\). A influência de cada participante é convertida individualmente em saldo a essa taxa uniforme: \(\Delta B_i = +I_i\), \(\Delta I_i = -I_i\), \(\Delta R_i = 0\) para cada \(i\).</p>
+<p>Alice fecha o mercado no estado final \(\mathbf{q}_m = (1,1)\), \(\nabla C = (0{,}6000,\ 0{,}4000)\). A influência de cada participante é convertida individualmente em saldo a essa taxa uniforme: \(\Delta B_i = +I_i\), \(\Delta I_i = -I_i\), \(\Delta P_i = 0\) para cada \(i\).</p>
 
 $$B_A \leftarrow 0{,}5419 + \left[1{,}4581 - (0{,}6 + 0{,}4)\right] = 0{,}5419 + 0{,}4581 = \mathbf{1{,}0000}$$
 $$B_B \leftarrow 0{,}2123 + 0{,}6000 = \mathbf{0{,}8123}$$
@@ -810,7 +810,7 @@ $$\text{Total: } 1{,}0000 + 0{,}8123 + 1{,}1877 = \mathbf{3{,}0000} \checkmark$$
 
 <div class="ledger-wrap">
 <table>
-  <thead><tr><th>Evento</th><th>\(R_{\text{Alice}}\)</th><th>\(R_{\text{Bob}}\)</th><th>\(R_{\text{Carol}}\)</th><th>\(R\) Total</th></tr></thead>
+  <thead><tr><th>Evento</th><th>\(P_{\text{Alice}}\)</th><th>\(P_{\text{Bob}}\)</th><th>\(P_{\text{Carol}}\)</th><th>\(P\) Total</th></tr></thead>
   <tbody>
     <tr><td>Inicial</td><td class="num">1,0000</td><td class="num">1,0000</td><td class="num">1,0000</td><td class="num check"><strong>3,0000</strong></td></tr>
     <tr><td>Após Make</td><td class="num">1,0000</td><td class="num">1,0000</td><td class="num">1,0000</td><td class="num check"><strong>3,0000</strong></td></tr>
@@ -826,7 +826,7 @@ $$\text{Total: } 1{,}0000 + 0{,}8123 + 1{,}1877 = \mathbf{3{,}0000} \checkmark$$
 
 <div class="table-wrap">
 <table>
-  <thead><tr><th>Agente</th><th>Pago</th><th>Recebido</th><th>\(\Delta R\) Líquido</th><th>Mecanismo</th></tr></thead>
+  <thead><tr><th>Agente</th><th>Pago</th><th>Recebido</th><th>\(\Delta P\) Líquido</th><th>Mecanismo</th></tr></thead>
   <tbody>
     <tr><td>Alice</td><td class="num">0,4581</td><td class="num">0,4581</td><td class="num zero"><strong>0</strong></td><td>Mercado simétrico no fechamento</td></tr>
     <tr><td>Bob</td><td class="num">0,7877</td><td class="num">0,6000</td><td class="num neg"><strong>−0,1877</strong></td><td>Pagou mais do que o valor atual: custo de impacto de preço liquidado nos Takes</td></tr>
@@ -864,7 +864,7 @@ $$\text{Total: } 1{,}0000 + 0{,}8123 + 1{,}1877 = \mathbf{3{,}0000} \checkmark$$
 </table>
 </div>
 
-<p><strong>Poder inicial total:</strong> \(R_{\text{total}} = 4{,}0000\). Essa quantidade é constitucionalmente conservada. Cada passo abaixo deve retornar a ela.</p>
+<p><strong>Poder inicial total:</strong> \(P_{\text{total}} = 4{,}0000\). Essa quantidade é constitucionalmente conservada. Cada passo abaixo deve retornar a ela.</p>
 
 <div class="phase">
   <div class="phase-tag">Fase I</div>
@@ -879,7 +879,7 @@ $$B_A \leftarrow 1{,}0000 - 0{,}9163 = \mathbf{0{,}0837}$$
 
 <p>O mercado inicializa em \(\mathbf{q}_m = (0, 0)\), confirmando \(C(\mathbf{0}) = L = 0{,}9163\) e \(\nabla C(\mathbf{0}) = (0{,}40,\ 0{,}60)\) — o prior, exatamente, antes de qualquer atividade de negociação.</p>
 
-<p>Make é pessoal em escopo e efeito: \(\Delta B_A = -L\), \(\Delta I_A = +L\), \(\Delta R_A = 0\). Bob, Carol e Dave não existem dentro desta operação.</p>
+<p>Make é pessoal em escopo e efeito: \(\Delta B_A = -L\), \(\Delta I_A = +L\), \(\Delta P_A = 0\). Bob, Carol e Dave não existem dentro desta operação.</p>
 
 <div class="phase">
   <div class="phase-tag">Fase II</div>
@@ -895,11 +895,11 @@ $$\Delta C_{\text{Bob}} = \mathbf{0{,}5231}, \qquad B_B \leftarrow 1{,}0000 - 0{
 
 $$\pi_1 = \mathbf{0{,}6444}, \qquad \pi_2 = \mathbf{0{,}3556}$$
 
-<p>Bob pagou \(0{,}5231\); sua posição vale imediatamente \(0{,}6444\). Sua deriva de poder no próprio Take: \(\Delta R_B^{\text{own}} = -0{,}5231 + 0{,}6444 = +0{,}1213\), originado da posição de criadora de Alice reprecificada. A influência de criadora de Alice é agora \(1{,}4394 - 0{,}6444 = 0{,}7950\), e seu poder caiu para \(0{,}0837 + 0{,}7950 = 0{,}8787\).</p>
+<p>Bob pagou \(0{,}5231\); sua posição vale imediatamente \(0{,}6444\). Sua deriva de poder no próprio Take: \(\Delta P_B^{\text{own}} = -0{,}5231 + 0{,}6444 = +0{,}1213\), originado da posição de criadora de Alice reprecificada. A influência de criadora de Alice é agora \(1{,}4394 - 0{,}6444 = 0{,}7950\), e seu poder caiu para \(0{,}0837 + 0{,}7950 = 0{,}8787\).</p>
 
 <div class="table-wrap">
 <table>
-  <thead><tr><th>Participante</th><th>\(B\)</th><th>\(I\)</th><th>\(R\)</th></tr></thead>
+  <thead><tr><th>Participante</th><th>\(B\)</th><th>\(I\)</th><th>\(P\)</th></tr></thead>
   <tbody>
     <tr><td>Alice</td><td class="num">0,0837</td><td class="num">0,7950</td><td class="num"><strong>0,8787</strong></td></tr>
     <tr><td>Bob</td><td class="num">0,4769</td><td class="num">0,6444</td><td class="num"><strong>1,1213</strong></td></tr>
@@ -910,7 +910,7 @@ $$\pi_1 = \mathbf{0{,}6444}, \qquad \pi_2 = \mathbf{0{,}3556}$$
 </table>
 </div>
 
-$$\Delta R_A = -0{,}1213, \qquad \Delta R_B = +0{,}1213, \qquad \Delta R_A + \Delta R_B = 0 \checkmark$$
+$$\Delta P_A = -0{,}1213, \qquad \Delta P_B = +0{,}1213, \qquad \Delta P_A + \Delta P_B = 0 \checkmark$$
 
 <div class="phase">
   <div class="phase-tag">Fase III</div>
@@ -928,11 +928,11 @@ $$\Delta C_{\text{Carol}} = \mathbf{0{,}4769}, \qquad B_C \leftarrow 1{,}0000 - 
 
 $$\pi_1 = \mathbf{0{,}4000}, \qquad \pi_2 = \mathbf{0{,}6000}$$
 
-<p>Carol entrou no estado \((1,0)\). A história prévia do mercado não é sua herança. Ela pagou \(0{,}4769\) por uma posição que vale imediatamente \(0{,}6000\): \(\Delta R_C^{\text{own}} = -0{,}4769 + 0{,}6000 = +0{,}1231\), originada de Bob, cuja posição caiu de \(0{,}6444\) para \(0{,}4000\). O mercado retorna exatamente ao prior, e a influência de criadora de Alice é restaurada para \(1{,}9163 - 1{,}0000 = 0{,}9163 = L\), com seu poder recuperando-se totalmente para \(1{,}0000\).</p>
+<p>Carol entrou no estado \((1,0)\). A história prévia do mercado não é sua herança. Ela pagou \(0{,}4769\) por uma posição que vale imediatamente \(0{,}6000\): \(\Delta P_C^{\text{own}} = -0{,}4769 + 0{,}6000 = +0{,}1231\), originada de Bob, cuja posição caiu de \(0{,}6444\) para \(0{,}4000\). O mercado retorna exatamente ao prior, e a influência de criadora de Alice é restaurada para \(1{,}9163 - 1{,}0000 = 0{,}9163 = L\), com seu poder recuperando-se totalmente para \(1{,}0000\).</p>
 
 <div class="table-wrap">
 <table>
-  <thead><tr><th>Participante</th><th>\(B\)</th><th>\(I\)</th><th>\(R\)</th></tr></thead>
+  <thead><tr><th>Participante</th><th>\(B\)</th><th>\(I\)</th><th>\(P\)</th></tr></thead>
   <tbody>
     <tr><td>Alice</td><td class="num">0,0837</td><td class="num">0,9163</td><td class="num"><strong>1,0000</strong></td></tr>
     <tr><td>Bob</td><td class="num">0,4769</td><td class="num">0,4000</td><td class="num"><strong>0,8769</strong></td></tr>
@@ -959,7 +959,7 @@ $$B_{\text{Dave}} = 1{,}0000 \not\geq 2{,}1559 \quad \text{REJEITADA}$$
 
 <p class="reject" style="text-align:center; font-size:1.05rem; letter-spacing: 0.1em;">⊘ TRANSAÇÃO REJEITADA ⊘</p>
 
-<p>O saldo de Dave é insuficiente. Ele não pode adquirir tanta influência sem a capacidade econômica para sustentá-la. O sistema impõe essa restrição rígida sem apelação, exceção ou superação. A opinião de Dave existe; ela simplesmente carrega zero poder de mercado. <strong>A crença no Probabilize não é expressa — é comprada.</strong> O estado de Dave permanece inalterado: \(R_D = 1{,}0000\).</p>
+<p>O saldo de Dave é insuficiente. Ele não pode adquirir tanta influência sem a capacidade econômica para sustentá-la. O sistema impõe essa restrição rígida sem apelação, exceção ou superação. A opinião de Dave existe; ela simplesmente carrega zero poder de mercado. <strong>A crença no Probabilize não é expressa — é comprada.</strong> O estado de Dave permanece inalterado: \(P_D = 1{,}0000\).</p>
 
 <h3>Precificação Dependente do Caminho</h3>
 
@@ -1019,7 +1019,7 @@ $$I_{\text{Carol}} = 0{,}6000 \quad (31{,}3\%)$$
   <h3>Alice Encerra o Mercado</h3>
 </div>
 
-<p>Alice fecha o mercado no estado final \(\mathbf{q}_m = (1, 1)\), \(\nabla C = (0{,}40,\ 0{,}60)\), \(C = 1{,}9163\). A influência de cada participante é convertida individualmente em saldo: \(\Delta B_i = +I_i\), \(\Delta I_i = -I_i\), \(\Delta R_i = 0\).</p>
+<p>Alice fecha o mercado no estado final \(\mathbf{q}_m = (1, 1)\), \(\nabla C = (0{,}40,\ 0{,}60)\), \(C = 1{,}9163\). A influência de cada participante é convertida individualmente em saldo: \(\Delta B_i = +I_i\), \(\Delta I_i = -I_i\), \(\Delta P_i = 0\).</p>
 
 $$B_A \leftarrow 0{,}0837 + \left[1{,}9163 - (0{,}40 + 0{,}60)\right] = 0{,}0837 + 0{,}9163 = \mathbf{1{,}0000}$$
 $$B_B \leftarrow 0{,}4769 + 0{,}4000 = \mathbf{0{,}8769}$$
@@ -1034,11 +1034,11 @@ $$B_C \leftarrow 0{,}5231 + 0{,}6000 = \mathbf{1{,}1231}$$
   <thead>
     <tr>
       <th>Evento</th>
-      <th>\(B_A\)</th><th>\(I_A\)</th><th>\(R_A\)</th>
-      <th>\(B_B\)</th><th>\(I_B\)</th><th>\(R_B\)</th>
-      <th>\(B_C\)</th><th>\(I_C\)</th><th>\(R_C\)</th>
-      <th>\(B_D\)</th><th>\(I_D\)</th><th>\(R_D\)</th>
-      <th>\(B_{\text{tot}}\)</th><th>\(I_{\text{tot}}\)</th><th>\(R_{\text{tot}}\)</th>
+      <th>\(B_A\)</th><th>\(I_A\)</th><th>\(P_A\)</th>
+      <th>\(B_B\)</th><th>\(I_B\)</th><th>\(P_B\)</th>
+      <th>\(B_C\)</th><th>\(I_C\)</th><th>\(P_C\)</th>
+      <th>\(B_D\)</th><th>\(I_D\)</th><th>\(P_D\)</th>
+      <th>\(B_{\text{tot}}\)</th><th>\(I_{\text{tot}}\)</th><th>\(P_{\text{tot}}\)</th>
     </tr>
   </thead>
   <tbody>
@@ -1059,13 +1059,13 @@ $$B_C \leftarrow 0{,}5231 + 0{,}6000 = \mathbf{1{,}1231}$$
 
 <p><strong>A linha do Unmake é a única em que cada participante tem influência zero.</strong> Esse não é um resultado separado produzido pelo Unmake — é a consequência de o Unmake converter a influência de cada participante em saldo de forma exata. Nenhum participante retém influência num mercado fechado; portanto, nenhuma resta. O zero é resíduo de conservação individual, não evento independente.</p>
 
-<p><strong>A coluna \(B_{\text{tot}}\) é a imagem espelhada de \(I_{\text{tot}}\).</strong> À medida que a influência cresce, o saldo encolhe na mesma quantidade exata. À medida que a influência retorna a zero após o Unmake, o saldo a recupera por inteiro. As duas colunas não são independentes — são uma única quantidade conservada, particionada em duas formas. \(R_{\text{tot}} = B_{\text{tot}} + I_{\text{tot}} = 4{,}0000\) em cada linha, sem exceção.</p>
+<p><strong>A coluna \(B_{\text{tot}}\) é a imagem espelhada de \(I_{\text{tot}}\).</strong> À medida que a influência cresce, o saldo encolhe na mesma quantidade exata. À medida que a influência retorna a zero após o Unmake, o saldo a recupera por inteiro. As duas colunas não são independentes — são uma única quantidade conservada, particionada em duas formas. \(P_{\text{tot}} = B_{\text{tot}} + I_{\text{tot}} = 4{,}0000\) em cada linha, sem exceção.</p>
 
 <h3>Decomposição da Liquidação do Tomador</h3>
 
 <div class="table-wrap">
 <table>
-  <thead><tr><th>Tomador</th><th>Estado de entrada</th><th>Pago \(\Delta C\)</th><th>\(\Delta R^{\text{own}}\)</th><th>\(\Delta R^{\text{subsequent}}\)</th><th>\(\Delta R\) Total</th><th>Recebido</th></tr></thead>
+  <thead><tr><th>Tomador</th><th>Estado de entrada</th><th>Pago \(\Delta C\)</th><th>\(\Delta P^{\text{own}}\)</th><th>\(\Delta P^{\text{subsequent}}\)</th><th>\(\Delta P\) Total</th><th>Recebido</th></tr></thead>
   <tbody>
     <tr><td>Bob</td><td class="num">\((0,0)\)</td><td class="num">0,5231</td><td class="num pos">+0,1213</td><td class="num neg">−0,2444</td><td class="num neg">−0,1231</td><td class="num">0,4000</td></tr>
     <tr><td>Carol</td><td class="num">\((1,0)\)</td><td class="num">0,4769</td><td class="num pos">+0,1231</td><td class="num zero">0</td><td class="num pos">+0,1231</td><td class="num">0,6000</td></tr>
@@ -1089,11 +1089,11 @@ $$B_A \leftarrow 0{,}0837 + 0{,}7950 = \mathbf{0{,}8787}, \qquad B_B \leftarrow 
   <thead>
     <tr>
       <th>Evento</th>
-      <th>\(B_A\)</th><th>\(I_A\)</th><th>\(R_A\)</th>
-      <th>\(B_B\)</th><th>\(I_B\)</th><th>\(R_B\)</th>
-      <th>\(B_C\)</th><th>\(I_C\)</th><th>\(R_C\)</th>
-      <th>\(B_D\)</th><th>\(I_D\)</th><th>\(R_D\)</th>
-      <th>\(B_{\text{tot}}\)</th><th>\(I_{\text{tot}}\)</th><th>\(R_{\text{tot}}\)</th>
+      <th>\(B_A\)</th><th>\(I_A\)</th><th>\(P_A\)</th>
+      <th>\(B_B\)</th><th>\(I_B\)</th><th>\(P_B\)</th>
+      <th>\(B_C\)</th><th>\(I_C\)</th><th>\(P_C\)</th>
+      <th>\(B_D\)</th><th>\(I_D\)</th><th>\(P_D\)</th>
+      <th>\(B_{\text{tot}}\)</th><th>\(I_{\text{tot}}\)</th><th>\(P_{\text{tot}}\)</th>
     </tr>
   </thead>
   <tbody>
@@ -1106,11 +1106,11 @@ $$B_A \leftarrow 0{,}0837 + 0{,}7950 = \mathbf{0{,}8787}, \qquad B_B \leftarrow 
 </div>
 <div class="scroll-hint show">← role horizontalmente →</div>
 
-<p>Os mesmos três fatos estruturais valem. A linha do Unmake é novamente idêntica nas colunas \(R\) à linha acima dela — porque o Unmake converte a influência de cada participante individualmente em saldo, e essa conversão individual é exata.</p>
+<p>Os mesmos três fatos estruturais valem. A linha do Unmake é novamente idêntica nas colunas \(P\) à linha acima dela — porque o Unmake converte a influência de cada participante individualmente em saldo, e essa conversão individual é exata.</p>
 
 <div class="table-wrap">
 <table>
-  <thead><tr><th>Tomador</th><th>Estado de entrada</th><th>Pago</th><th>\(\Delta R^{\text{own}}\)</th><th>\(\Delta R^{\text{subsequent}}\)</th><th>\(\Delta R\) Total</th><th>Recebido</th></tr></thead>
+  <thead><tr><th>Tomador</th><th>Estado de entrada</th><th>Pago</th><th>\(\Delta P^{\text{own}}\)</th><th>\(\Delta P^{\text{subsequent}}\)</th><th>\(\Delta P\) Total</th><th>Recebido</th></tr></thead>
   <tbody>
     <tr><td>Bob</td><td class="num">\((0,0)\)</td><td class="num">0,5231</td><td class="num pos">+0,1213</td><td class="num zero">0</td><td class="num pos">+0,1213</td><td class="num">0,6444</td></tr>
   </tbody>
@@ -1121,7 +1121,7 @@ $$B_A \leftarrow 0{,}0837 + 0{,}7950 = \mathbf{0{,}8787}, \qquad B_B \leftarrow 
 
 <div class="table-wrap">
 <table>
-  <thead><tr><th>Participante</th><th>\(\Delta R\) (execução completa)</th><th>\(\Delta R\) (Unmake antecipado)</th></tr></thead>
+  <thead><tr><th>Participante</th><th>\(\Delta P\) (execução completa)</th><th>\(\Delta P\) (Unmake antecipado)</th></tr></thead>
   <tbody>
     <tr><td>Alice</td><td class="num zero">0</td><td class="num neg">−0,1213</td></tr>
     <tr><td>Bob</td><td class="num neg">−0,1231</td><td class="num pos">+0,1213</td></tr>
@@ -1141,15 +1141,15 @@ $$B_A \leftarrow 0{,}0837 + 0{,}7950 = \mathbf{0{,}8787}, \qquad B_B \leftarrow 
 <table>
   <thead><tr><th>Propriedade</th><th>Onde Observada</th></tr></thead>
   <tbody>
-    <tr><td>Make: conversão pessoal \(B \to I\)</td><td>Fase I: \(\Delta B_A = -L\), \(\Delta I_A = +L\), \(\Delta R_A = 0\); demais inalterados</td></tr>
-    <tr><td>Take: reprecifica imediatamente a influência do criador</td><td>Fase II: \(R\) de Alice cai de \(1{,}0000\) para \(0{,}8787\) sem transacionar</td></tr>
+    <tr><td>Make: conversão pessoal \(B \to I\)</td><td>Fase I: \(\Delta B_A = -L\), \(\Delta I_A = +L\), \(\Delta P_A = 0\); demais inalterados</td></tr>
+    <tr><td>Take: reprecifica imediatamente a influência do criador</td><td>Fase II: \(P\) de Alice cai de \(1{,}0000\) para \(0{,}8787\) sem transacionar</td></tr>
     <tr><td>\(I_{\text{tot}}\) traça exatamente a profundidade do mercado</td><td>Livros-razão: \(I_{\text{tot}} = C(\mathbf{q}_m)\) em cada linha</td></tr>
     <tr><td>\(B_{\text{tot}}\) e \(I_{\text{tot}}\) são imagens espelhadas</td><td>Livros-razão: sua soma é \(4{,}0000\) em cada linha</td></tr>
-    <tr><td>Unmake: conversão pessoal \(I \to B\) para todos simultaneamente</td><td>Ambos livros-razão: \(\Delta R_i = 0\) para cada participante; \(I_{\text{tot}} = 0\) segue como consequência</td></tr>
-    <tr><td>Unmake: coluna \(R\) idêntica à linha anterior</td><td>Ambos livros-razão: Unmake converte; não redistribui</td></tr>
+    <tr><td>Unmake: conversão pessoal \(I \to B\) para todos simultaneamente</td><td>Ambos livros-razão: \(\Delta P_i = 0\) para cada participante; \(I_{\text{tot}} = 0\) segue como consequência</td></tr>
+    <tr><td>Unmake: coluna \(P\) idêntica à linha anterior</td><td>Ambos livros-razão: Unmake converte; não redistribui</td></tr>
     <tr><td>Unmake: liquidação a preços correntes, não reembolso ao custo</td><td>Execução completa: Bob pagou \(0{,}5231\), recebeu \(0{,}4000\)</td></tr>
     <tr><td>Exposição do tomador começa na entrada, não na criação do mercado</td><td>Fase III: Carol não afetada pela distorção prévia de Bob a \(64{,}44\%\)</td></tr>
-    <tr><td>\(\Delta R\) decompõe-se em próprio Take e Takes subsequentes</td><td>Tabelas de decomposição da liquidação acima</td></tr>
+    <tr><td>\(\Delta P\) decompõe-se em próprio Take e Takes subsequentes</td><td>Tabelas de decomposição da liquidação acima</td></tr>
     <tr><td>Entrada de Carol necessária para a recuperação total de Alice</td><td>Comparação do ciclo de vida: sem Carol, Alice carrega \(-0{,}1213\) permanentemente</td></tr>
     <tr><td>Crença imposta por capital</td><td>Fase IV: negociação de Dave rejeitada</td></tr>
     <tr><td>Restauração do prior por negociações simétricas</td><td>Fase III: \(\nabla C(1,1) = p\) exatamente</td></tr>
@@ -1169,7 +1169,7 @@ $$B_A \leftarrow 0{,}0837 + 0{,}7950 = \mathbf{0{,}8787}, \qquad B_B \leftarrow 
 
 <p>Defina o poder total como:</p>
 
-$$R_{\text{total}} = \sum_{i} B_i + I_{\text{total}}, \qquad I_{\text{total}} = \sum_{\text{mercados}} C(\mathbf{q}_m)$$
+$$P_{\text{total}} = \sum_{i} B_i + I_{\text{total}}, \qquad I_{\text{total}} = \sum_{\text{mercados}} C(\mathbf{q}_m)$$
 
 <p>Essa definição global se apoia em um único fato estrutural: para qualquer mercado ativo, o criador detém influência \(C(\mathbf{q}_m) - \nabla C(\mathbf{q}_m) \cdot \mathbf{q}_m\), e todos os tomadores coletivamente detêm \(\nabla C(\mathbf{q}_m) \cdot \sum_t \mathbf{q}_t\). A soma é \(C(\mathbf{q}_m)\) — exatamente o custo do mercado.</p>
 
@@ -1192,7 +1192,7 @@ $$I_{\text{market}} = \left(C(\mathbf{q}_m) - \nabla C(\mathbf{q}_m) \cdot \math
 
 <h3>Operação 1: Make — Pessoal em Escopo e Efeito</h3>
 
-$$\Delta B_m = -L, \qquad \Delta I_m = +L, \qquad \Delta R_m = 0$$
+$$\Delta B_m = -L, \qquad \Delta I_m = +L, \qquad \Delta P_m = 0$$
 
 <p>Nenhum saldo ou influência de outro participante é afetado.</p>
 
@@ -1200,25 +1200,25 @@ $$\Delta B_m = -L, \qquad \Delta I_m = +L, \qquad \Delta R_m = 0$$
 
 <p>A influência de cada participante converte-se individualmente em saldo à taxa uniforme \(\nabla C(\mathbf{q}_m)\):</p>
 
-$$\Delta B_m = +[C(\mathbf{q}_m) - \nabla C(\mathbf{q}_m) \cdot \mathbf{q}_m], \quad \Delta I_m = -[C(\mathbf{q}_m) - \nabla C(\mathbf{q}_m) \cdot \mathbf{q}_m], \quad \Delta R_m = 0$$
+$$\Delta B_m = +[C(\mathbf{q}_m) - \nabla C(\mathbf{q}_m) \cdot \mathbf{q}_m], \quad \Delta I_m = -[C(\mathbf{q}_m) - \nabla C(\mathbf{q}_m) \cdot \mathbf{q}_m], \quad \Delta P_m = 0$$
 
-$$\Delta B_t = +\nabla C(\mathbf{q}_m) \cdot \mathbf{q}_t, \quad \Delta I_t = -\nabla C(\mathbf{q}_m) \cdot \mathbf{q}_t, \quad \Delta R_t = 0$$
+$$\Delta B_t = +\nabla C(\mathbf{q}_m) \cdot \mathbf{q}_t, \quad \Delta I_t = -\nabla C(\mathbf{q}_m) \cdot \mathbf{q}_t, \quad \Delta P_t = 0$$
 
-<p>O evento primário é \(\Delta R_i = 0\) para cada \(i\). A consequência secundária é \(I_{\text{tot}} = 0\): nenhum participante retém influência num mercado fechado, então nenhuma sobra. Nenhum poder cruza entre participantes. O corolário confirma que o saldo total ganho é igual a \(C(\mathbf{q}_m)\) e a influência total perdida é igual a \(C(\mathbf{q}_m)\) — uma verificação global que decorre da conservação individual, não de mecanismo separado.</p>
+<p>O evento primário é \(\Delta P_i = 0\) para cada \(i\). A consequência secundária é \(I_{\text{tot}} = 0\): nenhum participante retém influência num mercado fechado, então nenhuma sobra. Nenhum poder cruza entre participantes. O corolário confirma que o saldo total ganho é igual a \(C(\mathbf{q}_m)\) e a influência total perdida é igual a \(C(\mathbf{q}_m)\) — uma verificação global que decorre da conservação individual, não de mecanismo separado.</p>
 
 <p><strong>A decomposição temporal da discrepância de liquidação.</strong> Para o tomador \(t\) que adquiriu posição \(\mathbf{q}_t\) no estado de mercado \(\mathbf{q}_{\text{old}} \to \mathbf{q}_{\text{new}} = \mathbf{q}_{\text{old}} + \mathbf{q}_t\), pagando \(\Delta C = C(\mathbf{q}_{\text{new}}) - C(\mathbf{q}_{\text{old}})\), a discrepância entre pagamento e recebimento se decompõe como:</p>
 
-$$\nabla C(\mathbf{q}_m) \cdot \mathbf{q}_t - \Delta C = \underbrace{-\Delta C + \nabla C(\mathbf{q}_{\text{new}}) \cdot \mathbf{q}_t}_{\Delta R_t^{\text{own}}} + \underbrace{\left[\nabla C(\mathbf{q}_m) - \nabla C(\mathbf{q}_{\text{new}})\right] \cdot \mathbf{q}_t}_{\Delta R_t^{\text{subsequent}}}$$
+$$\nabla C(\mathbf{q}_m) \cdot \mathbf{q}_t - \Delta C = \underbrace{-\Delta C + \nabla C(\mathbf{q}_{\text{new}}) \cdot \mathbf{q}_t}_{\Delta P_t^{\text{own}}} + \underbrace{\left[\nabla C(\mathbf{q}_m) - \nabla C(\mathbf{q}_{\text{new}})\right] \cdot \mathbf{q}_t}_{\Delta P_t^{\text{subsequent}}}$$
 
 <p><strong>Por que takes passados são excluídos.</strong> Antes do tomador \(t\) entrar, sua posição é \(\mathbf{q}_t = \mathbf{0}\). Para cada Take ocorrido antes de sua entrada:</p>
 
-$$\Delta R_t^{\text{past}} = \left[\nabla C(\mathbf{q}'') - \nabla C(\mathbf{q}')\right] \cdot \mathbf{0} = 0$$
+$$\Delta P_t^{\text{past}} = \left[\nabla C(\mathbf{q}'') - \nabla C(\mathbf{q}')\right] \cdot \mathbf{0} = 0$$
 
 <p>Uma posição zero é invisível à reprecificação. Isso define o <strong>limite temporal</strong> preciso:</p>
 
 <div class="table-wrap">
 <table>
-  <thead><tr><th>Período</th><th>Movimentos do mercado</th><th>Efeito sobre \(\Delta R_t\)</th></tr></thead>
+  <thead><tr><th>Período</th><th>Movimentos do mercado</th><th>Efeito sobre \(\Delta P_t\)</th></tr></thead>
   <tbody>
     <tr><td>Antes da entrada</td><td class="num">\(\mathbf{q}_{\text{initial}} \to \mathbf{q}_{\text{old}}\)</td><td class="num zero">\(= 0\) (sem posição detida)</td></tr>
     <tr><td>Próprio Take</td><td class="num">\(\mathbf{q}_{\text{old}} \to \mathbf{q}_{\text{new}}\)</td><td class="num">\(= -\Delta C + \nabla C(\mathbf{q}_{\text{new}}) \cdot \mathbf{q}_t\)</td></tr>
@@ -1234,13 +1234,13 @@ $$\Delta R_t^{\text{past}} = \left[\nabla C(\mathbf{q}'') - \nabla C(\mathbf{q}'
 <p>Seja \(\mathbf{q} \to \mathbf{q}' = \mathbf{q} + \Delta\mathbf{q}\).</p>
 
 <p><strong>O tomador transacionante</strong> (posição prévia \(\mathbf{q}_t\)):</p>
-$$\Delta R_t = -(C(\mathbf{q}') - C(\mathbf{q})) + \nabla C(\mathbf{q}') \cdot (\mathbf{q}_t + \Delta\mathbf{q}) - \nabla C(\mathbf{q}) \cdot \mathbf{q}_t \neq 0 \text{ em geral}$$
+$$\Delta P_t = -(C(\mathbf{q}') - C(\mathbf{q})) + \nabla C(\mathbf{q}') \cdot (\mathbf{q}_t + \Delta\mathbf{q}) - \nabla C(\mathbf{q}) \cdot \mathbf{q}_t \neq 0 \text{ em geral}$$
 
 <p><strong>O criador</strong> (saldo inalterado):</p>
-$$\Delta R_m = [C(\mathbf{q}') - \nabla C(\mathbf{q}') \cdot \mathbf{q}'] - [C(\mathbf{q}) - \nabla C(\mathbf{q}) \cdot \mathbf{q}]$$
+$$\Delta P_m = [C(\mathbf{q}') - \nabla C(\mathbf{q}') \cdot \mathbf{q}'] - [C(\mathbf{q}) - \nabla C(\mathbf{q}) \cdot \mathbf{q}]$$
 
 <p><strong>Todos os tomadores existentes</strong> \(s \neq t\) (posições e saldos inalterados):</p>
-$$\Delta R_s = [\nabla C(\mathbf{q}') - \nabla C(\mathbf{q})] \cdot \mathbf{q}_s$$
+$$\Delta P_s = [\nabla C(\mathbf{q}') - \nabla C(\mathbf{q})] \cdot \mathbf{q}_s$$
 
 <p>A fonte da redistribuição é a convexidade estrita de \(C\). Para qualquer negociação não-trivial:</p>
 
@@ -1248,13 +1248,13 @@ $$\nabla C(\mathbf{q}) \cdot \Delta\mathbf{q} < C(\mathbf{q}') - C(\mathbf{q}) <
 
 <p>Essa cunha — intrínseca ao LMSR, impossível de eliminar por design — é simultaneamente o que gera a redistribuição entre participantes e o que produz a precificação dependente do caminho: a mesma não-linearidade que faz o poder fluir no Take faz com que a segunda unidade de qualquer resultado custe mais que a primeira. Não obstante:</p>
 
-$$\sum_i \Delta R_i = 0 \quad \checkmark$$
+$$\sum_i \Delta P_i = 0 \quad \checkmark$$
 
 <h3>A Taxonomia Completa</h3>
 
 <div class="table-wrap">
 <table>
-  <thead><tr><th>Operação</th><th>Escopo</th><th>\(\Delta R_i\) Individual</th><th>\(\Delta R\) do Sistema</th><th>Mecanismo</th></tr></thead>
+  <thead><tr><th>Operação</th><th>Escopo</th><th>\(\Delta P_i\) Individual</th><th>\(\Delta P\) do Sistema</th><th>Mecanismo</th></tr></thead>
   <tbody>
     <tr><td><strong>Make</strong></td><td>Pessoal</td><td>\(0\) para o criador; demais inalterados</td><td class="num zero">\(0\)</td><td>Conversão pessoal \(B \to I\)</td></tr>
     <tr><td><strong>Take</strong></td><td>Social</td><td>\(\neq 0\) em geral</td><td class="num zero">\(0\)</td><td>Redistribuição entre participantes</td></tr>
