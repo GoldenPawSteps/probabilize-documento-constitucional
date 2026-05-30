@@ -768,7 +768,7 @@ $$\Delta B_{\text{tot}} = +C(\mathbf{q}_m), \qquad \Delta I_{\text{tot}} = -C(\m
 
 <p>Para o criador com influência residual \(C(\mathbf{q}_m) - \nabla C(\mathbf{q}_m) \cdot \mathbf{q}_m\):</p>
 
-$$\Delta I_A = [C(\mathbf{q}') - \nabla C(\mathbf{q}') \cdot \mathbf{q}'] - [C(\mathbf{q}_m) - \nabla C(\mathbf{q}_m) \cdot \mathbf{q}_m]$$
+$$\Delta I_m = [C(\mathbf{q}') - \nabla C(\mathbf{q}') \cdot \mathbf{q}'] - [C(\mathbf{q}_m) - \nabla C(\mathbf{q}_m) \cdot \mathbf{q}_m]$$
 
 <p>Para qualquer tomador existente \(s \neq t\) com posição \(\mathbf{q}_s\):</p>
 
@@ -787,7 +787,7 @@ $$\sum_i \Delta P_i = \underbrace{(-\Delta C + \Delta I_t)}_{\text{tomador}} + \
   <thead><tr><th>Participante</th><th>\(\Delta B\)</th><th>\(\Delta I\)</th><th>\(\Delta P\)</th><th>Fonte da variação</th></tr></thead>
   <tbody>
     <tr><td>Tomador que transaciona</td><td class="num">\(-\Delta C\)</td><td class="num">\(\Delta I_t\)</td><td class="num">\(-\Delta C + \Delta I_t\)</td><td>Troca financeira e reprecificação da posição resultante</td></tr>
-    <tr><td>Criador</td><td class="num zero">\(0\)</td><td class="num">\(\Delta I_A\)</td><td class="num">\(\Delta I_A\)</td><td>Reprecificação pura da reivindicação residual</td></tr>
+    <tr><td>Criador</td><td class="num zero">\(0\)</td><td class="num">\(\Delta I_m\)</td><td class="num">\(\Delta I_m\)</td><td>Reprecificação pura da reivindicação residual</td></tr>
     <tr><td>Todos os demais tomadores</td><td class="num zero">\(0\)</td><td class="num">\(\Delta I_s\)</td><td class="num">\(\Delta I_s\)</td><td>Reprecificação pura das posições detidas</td></tr>
     <tr><td><strong>Sistema</strong></td><td class="num">\(-\Delta C\)</td><td class="num">\(+\Delta C\)</td><td class="num zero">\(0\)</td><td>Conservação</td></tr>
   </tbody>
@@ -1545,7 +1545,7 @@ $$\nabla C(\mathbf{q}_m) \cdot \mathbf{q}_t - \Delta C_t^{\text{líq}} = \underb
   $$\Delta P_i = \Delta I_i, \qquad \Delta B_i = 0$$
 </div>
 
-<p>Para o criador: \(\Delta I_A = [C(\mathbf{q}') - \nabla C(\mathbf{q}') \cdot \mathbf{q}'] - [C(\mathbf{q}) - \nabla C(\mathbf{q}) \cdot \mathbf{q}]\).</p>
+<p>Para o criador: \(\Delta I_m = [C(\mathbf{q}') - \nabla C(\mathbf{q}') \cdot \mathbf{q}'] - [C(\mathbf{q}) - \nabla C(\mathbf{q}) \cdot \mathbf{q}]\).</p>
 
 <p>Para cada tomador existente \(s \neq t\): \(\Delta I_s = [\nabla C(\mathbf{q}') - \nabla C(\mathbf{q})] \cdot \mathbf{q}_s\).</p>
 
