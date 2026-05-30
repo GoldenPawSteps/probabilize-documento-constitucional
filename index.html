@@ -555,7 +555,7 @@
 
 $$L = -b \cdot \ln(\min_i \, p_i)$$
 
-<p>Este é o subsídio de pior caso que o criador garante pagar. O mercado só pode ser criado se o criador puder arcar com ele:</p>
+<p>Este é o supremo das perdas que o criador pode aproximar, mas nunca de fato incorrer. O pior caso — toda a negociação concentrada no resultado menos provável — exige capital infinito dos tomadores e é, portanto, constitucionalmente inalcançável em qualquer sociedade finita. Em todo estado de mercado alcançável, a influência do criador é estritamente positiva, e a perda estritamente menor que \(L\). Mas \(L\) é o montante exato necessário para permanecer solvente até o limite, e, assim, o mercado só pode ser criado se o criador puder arcar com ele:</p>
 
 $$B_m \geq L$$
 
@@ -918,7 +918,7 @@ $$\underbrace{B_t \leftarrow B_t - \Delta C}_{\substack{\text{paga se } \Delta C
 
 $$L = -b \cdot \ln(\min_i\, p_i) = -0,5 \cdot \ln(0,40) = -0,5 \cdot (-0,9163) = \mathbf{0,4581}$$
 
-<p>\(L\) é a perda máxima possível do criador: cresce com \(b\) (liquidez mais profunda exige mais capital) e com a "surpresa" do resultado mais raro. Em \(b \to 0\), os mercados tornam-se infinitamente nítidos e baratos; em \(b \to \infty\), infinitamente líquidos e caros.</p>
+<p>\(L\) é o supremo das perdas que o mercado pode aproximar, mas nunca entregar: cresce com \(b\) (liquidez mais profunda exige mais capital) e com a "surpresa" do resultado mais raro. Em \(b \to 0\), os mercados tornam-se infinitamente nítidos e baratos; em \(b \to \infty\), infinitamente líquidos e caros. A perda de fato em qualquer estado alcançável é estritamente menor que \(L\), mas \(L\) é o montante exato necessário para permanecer solvente até o limite.</p>
 
 <p>Alice pode arcar com isso — \(B_A = 1,0000 \geq 0,4581\) — e o mercado é criado:</p>
 
@@ -967,7 +967,7 @@ $$B_B \leftarrow 1,0000 - 0,7877 = \mathbf{0,2123}$$
 $$\pi_1 = \frac{0,6 \cdot e^2}{4,8335} = \frac{4,4335}{4,8335} = \mathbf{0,9173} \quad (91{,}73\%)$$
 $$\pi_2 = \frac{0,4}{4,8335} = \mathbf{0,0827} \quad (8{,}27\%)$$
 
-<p>O capital comprometido de Bob elevou a probabilidade implícita do mercado de "Sim" de <strong>60% para 91,73%</strong>. Na camada coletiva: o pagamento de Bob financia um aumento de \(+0,7877\) no pool. Na camada individual, as duas equações operam:</p>
+<p>O capital comprometido de Bob elevou a probabilidade implícita do mercado de "Sim" de <strong>60% para 91,73%</strong>. Na camada coletiva: o pagamento de Bob financia um aumento de \(+0,7877\) no pool. Na camada individual, as duas equações governantes operam:</p>
 
 <ul>
   <li><strong>Bob</strong> (tomador que transaciona): \(\Delta P_B = -0,7877 + \Delta I_B\). Sua nova posição \((1,0)\) é valorizada em \(0,9173\); sua posição prévia era \(0\). Logo \(\Delta I_B = 0,9173\), e \(\Delta P_B = -0,7877 + 0,9173 = +0,1296\).</li>
@@ -1436,6 +1436,7 @@ $$B_A \leftarrow 0,0837 + 0,7950 = \mathbf{0,8787}, \qquad B_B \leftarrow 0,4769
 <table>
   <thead><tr><th>Propriedade</th><th>Onde Observada</th></tr></thead>
   <tbody>
+    <tr><td>\(L\) é supremo, não máximo: a influência do criador é estritamente positiva em todo estado alcançável</td><td>Formal: \(I_m &gt; 0\) para todo \(\mathbf{q}_m\) finito; o pior caso exige capital infinito, que é constitucionalmente inalcançável</td></tr>
     <tr><td>Criar: pessoal em escopo e efeito</td><td>Fase I: \(P\) de Alice inalterado; os demais não existem na operação</td></tr>
     <tr><td>Duas equações governantes em toda Tomada</td><td>Fases II–III: \(\Delta P_t = -\Delta C + \Delta I_t\) para Bob/Carol; \(\Delta P_i = \Delta I_i\) para Alice</td></tr>
     <tr><td>Participantes não transacionantes reprecificados apenas pelo deslocamento do gradiente</td><td>Fase II: \(P\) de Alice cai de \(1,0000\) para \(0,8787\) sem transacionar; \(\Delta P_A = \Delta I_A\) exatamente</td></tr>
@@ -1465,7 +1466,7 @@ $$B_A \leftarrow 0,0837 + 0,7950 = \mathbf{0,8787}, \qquad B_B \leftarrow 0,4769
 <!-- Seção VIII -->
 <h2 id="sec-8"><span class="roman">VIII</span>Conservação do Poder — Prova Formal</h2>
 
-<p>As simulações precedentes verificaram a conservação numericamente, passo a passo. O que se segue eleva essa verificação a uma prova — estabelecendo que a conservação do sistema é absoluta, derivando as duas equações governantes como a prestação de contas completa do fluxo de poder individual, e caracterizando precisamente o que cada condição de interesse implica e o que não implica.</p>
+<p>As simulações precedentes verificaram a conservação numericamente, passo a passo. O que se segue eleva essa verificação a uma prova — estabelecendo que a conservação do sistema é absoluta, derivando as duas equações governantes como a prestação de contas completa do fluxo de poder individual, caracterizando precisamente o que cada condição de interesse implica e o que não implica, e provando que o depósito de liquidez \(L\) é um supremo aproximado assintoticamente, e não um máximo jamais atingido.</p>
 
 <h3>O Invariante, Enunciado com Precisão</h3>
 
@@ -1490,6 +1491,28 @@ $$I_{\text{mercado}} = \left(C(\mathbf{q}_m) - \nabla C(\mathbf{q}_m) \cdot \mat
   $$I_{\text{mercado}} = C(\mathbf{q}_m)$$
 </div>
 
+<h3>Lema Estrutural: \(L\) é o Supremo das Perdas do Criador, Não o Máximo</h3>
+
+<p><strong>Afirmação:</strong> A influência do criador \(I_m = C(\mathbf{q}_m) - \nabla C(\mathbf{q}_m) \cdot \mathbf{q}_m &gt; 0\) estritamente em todo estado de mercado alcançável, e \(\sup I_m^{\text{perda}} = L\) é aproximado mas nunca atingido.</p>
+
+<p><strong>Prova.</strong> Suponha que a negociação se concentre no resultado \(\omega_k\), de modo que \(\mathbf{q}_m = q_k \mathbf{e}_k\). Quando \(q_k \to \infty\):</p>
+
+$$C(q_k \mathbf{e}_k) \approx L + b\ln(p_k) + q_k, \qquad \nabla C_k \to 1$$
+
+<p>Portanto:</p>
+
+$$I_m \approx (L + b\ln p_k + q_k) - q_k = L + b\ln p_k$$
+
+<p>A perda líquida do criador aproxima-se de \(-b\ln p_k = -b\ln(\min_i p_i) = L\) quando \(k = \arg\min_i p_i\). Entretanto, em qualquer \(q_k\) finito:</p>
+
+$$I_m = L + b\ln p_k + b\ln\!\left(1 + \sum_{j \neq k} p_j e^{-q_k/b}\right) > L + b\ln p_k > 0$$
+
+<p>O termo de correção é estritamente positivo para todo \(q_k\) finito, anulando-se apenas no limite. Atingir \(I_m = 0\) requer \(q_k \to \infty\), o que, pela convexidade estrita de \(C\), demanda capital cumulativo infinito dos tomadores:</p>
+
+$$\sum_{n=1}^{\infty} \Delta C^{(n)}_{\omega_k} = \infty$$
+
+<p>Nenhuma sociedade finita com saldos iniciais finitos pode comprometer capital infinito. Portanto \(I_m &gt; 0\) estritamente em todo estado alcançável, e \(L\) é um supremo aproximado assintoticamente, nunca um máximo atingido. \(\blacksquare\)</p>
+
 <h3>Lema Estrutural: A Liquidação Sempre Move o Mercado para Baixo</h3>
 
 <p><strong>Afirmação:</strong> Para qualquer negociação de liquidação pura — \(\Delta\mathbf{q} \leq \mathbf{0}\) com pelo menos uma desigualdade estrita — temos \(\Delta C &lt; 0\) incondicionalmente.</p>
@@ -1505,7 +1528,7 @@ $$\frac{\partial C}{\partial q_i} = \frac{p_i \cdot e^{q_i/b}}{\sum_j p_j \cdot 
 $$\Delta B_m = -L, \qquad \Delta I_m = +L, \qquad \Delta P_m = 0$$
 $$\Delta B_{\text{tot}} = -L, \qquad \Delta I_{\text{tot}} = +L, \qquad \Delta B_{\text{tot}} + \Delta I_{\text{tot}} = 0$$
 
-<p>Nenhum saldo ou influência de outro participante é afetado.</p>
+<p>O criador deposita o supremo de suas perdas possíveis. Sua influência é estritamente positiva em todo estado alcançável a partir daí. Nenhum saldo ou influência de outro participante é afetado.</p>
 
 <h3>Operação 3: Desfazer — Conversão Pessoal \(I \to B\) para Todos Simultaneamente</h3>
 
@@ -1555,9 +1578,7 @@ $$\nabla C(\mathbf{q}_m) \cdot \mathbf{q}_t - \Delta C_t^{\text{líq}} = \underb
 
 $$\sum_i \Delta P_i = (-\Delta C + \Delta I_t) + \sum_{i \neq t} \Delta I_i = -\Delta C + \sum_i \Delta I_i = -\Delta C + \Delta C = 0$$
 
-<p>Isto é absoluto — decorre incondicionalmente da definição de \(C\) e das regras de atualização, para toda Tomada, em qualquer direção, de qualquer tamanho. As duas equações governantes não são meramente consistentes com a conservação; em conjunto com esta identidade, elas a constituem.</p>
-
-<p>A convexidade estrita de \(C\) produz a cunha que torna a redistribuição genérica:</p>
+<p>Isto é absoluto — decorre incondicionalmente da definição de \(C\) e das regras de atualização, para toda Tomada, em qualquer direção, de qualquer tamanho. A convexidade estrita de \(C\) produz a cunha que torna a redistribuição genérica:</p>
 
 $$\nabla C(\mathbf{q}) \cdot \Delta\mathbf{q} < C(\mathbf{q}') - C(\mathbf{q}) < \nabla C(\mathbf{q}') \cdot \Delta\mathbf{q} \quad \text{(para } \Delta C \neq 0 \text{ não trivial)}$$
 
@@ -1569,7 +1590,7 @@ $$\nabla C(\mathbf{q}) \cdot \Delta\mathbf{q} < C(\mathbf{q}') - C(\mathbf{q}) <
 <table>
   <thead><tr><th>Operação</th><th>\(\Delta B_{\text{tot}} + \Delta I_{\text{tot}}\)</th><th>\(\Delta P_i\) individual</th><th>\(\Delta P\) do sistema</th><th>Mecanismo</th></tr></thead>
   <tbody>
-    <tr><td><strong>Criar</strong></td><td class="num zero">\(= 0\)</td><td>\(0\) para o criador; os demais intocados</td><td class="num zero">\(0\)</td><td>Estabelece o pool em \(L\); conversão pessoal \(B \to I\)</td></tr>
+    <tr><td><strong>Criar</strong></td><td class="num zero">\(= 0\)</td><td>\(0\) para o criador; os demais intocados</td><td class="num zero">\(0\)</td><td>Deposita \(L\) (supremo das perdas); estabelece o pool; conversão pessoal \(B \to I\)</td></tr>
     <tr><td><strong>Tomar</strong></td><td class="num zero">\(= 0\) (absoluto)</td><td>Tomador: \(-\Delta C + \Delta I_t\); demais: \(\Delta I_i\); genericamente \(\neq 0\)</td><td class="num zero">\(0\) (absoluto)</td><td>O tomador paga para mover o mercado; todos os demais reprecificados pelo gradiente que ele cria</td></tr>
     <tr><td><strong>Desfazer</strong></td><td class="num zero">\(= 0\)</td><td>\(0\) para todos os participantes (exato)</td><td class="num zero">\(0\)</td><td>Conversão pessoal \(I \to B\) para todos simultaneamente</td></tr>
   </tbody>
@@ -1588,6 +1609,8 @@ $$\nabla C(\mathbf{q}) \cdot \Delta\mathbf{q} < C(\mathbf{q}') - C(\mathbf{q}) <
   <strong>A verdade, no Probabilize, é escassa. E a escassez é imposta por esta lei.</strong>
 </div>
 
+<p>O criador não meramente faz uma pergunta — ele a capitaliza. O depósito \(L = -b\ln(\min_i p_i)\) não é a perda máxima que o criador sofrerá. É o supremo das perdas que o mercado pode aproximar, mas nunca entregar. O pior caso — toda a massa de probabilidade concentrada no resultado menos provável — exige capital infinito dos tomadores e é, portanto, constitucionalmente inalcançável em qualquer sociedade finita. A influência do criador é estritamente positiva em todo estado alcançável. \(L\) é o montante exato necessário para permanecer solvente até o limite — um limite que o sistema aproxima assintoticamente, financiado uma negociação por vez, mas nunca cruza.</p>
+
 <p>O poder flui em direção àqueles cujas crenças são confirmadas pela atividade subsequente do mercado. Ele flui inteiramente através de Tomar — nunca através de Criar, nunca através de Desfazer — e é governado a cada passo por \(\Delta P_t = -\Delta C + \Delta I_t\) para o tomador que transaciona e \(\Delta P_i = \Delta I_i\) para todo outro participante. O tomador paga para mover o mercado; todos os demais simplesmente assistem suas posições serem revalorizadas pelo gradiente que o tomador criou. A lei de conservação se fecha porque a influência total criada pelo pagamento do tomador é exatamente redistribuída entre todos os participantes por meio da reprecificação. Nenhum poder é criado. Nenhum poder é destruído. Ele flui.</p>
 
 <div class="ornament">◆ ◆ ◆</div>
@@ -1601,7 +1624,7 @@ $$\nabla C(\mathbf{q}) \cdot \Delta\mathbf{q} < C(\mathbf{q}') - C(\mathbf{q}) <
   <tbody>
     <tr><td><strong>Saldo</strong></td><td>Sua capacidade econômica líquida corrente; limita a compra; recuperável por liquidação</td></tr>
     <tr><td><strong>Mercado</strong></td><td>Uma pergunta probabilística capitalizada</td></tr>
-    <tr><td><strong>Criar</strong></td><td>Criar um mercado; definir probabilidades a priori; estabelecer o pool coletivo em \(L\); conversão pessoal \(B \to I\)</td></tr>
+    <tr><td><strong>Criar</strong></td><td>Criar um mercado; definir probabilidades a priori; depositar \(L\) — o supremo das perdas possíveis, nunca de fato atingido; conversão pessoal \(B \to I\)</td></tr>
     <tr><td><strong>Tomar</strong></td><td>Comprar ou vender uma posição; tomador governado por \(\Delta P_t = -\Delta C + \Delta I_t\); todos os demais por \(\Delta P_i = \Delta I_i\); poder do sistema conservado absolutamente; \(\sum_i \Delta I_i = \Delta C\) fecha a lei</td></tr>
     <tr><td><strong>Desfazer</strong></td><td>Fechar um mercado; conversão pessoal \(I \to B\) para todos simultaneamente — poder individual conservado exatamente para todos os participantes; todo o pool distribuído</td></tr>
     <tr><td><strong>Influência</strong></td><td>Sua fração do pool coletivo aos preços correntes do mercado; lastreada pela fundação do criador e por todos os pagamentos líquidos dos tomadores juntos; individualmente recuperável por liquidação</td></tr>
