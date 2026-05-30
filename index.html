@@ -697,7 +697,7 @@ $$C(\mathbf{q}_m) = \underbrace{L}_{\text{depósito do criador}} + \underbrace{\
   $$P = B + I$$
 </div>
 
-<p>O poder é a soma de saldo e influência. Enunciar a lei de conservação com plena precisão requer atentar para duas camadas distintas: a camada coletiva, onde a conservação é absoluta, e a camada individual, onde a redistribuição é a norma.</p>
+<p>O poder é a soma de saldo e influência. Enunciar a lei de conservação com plena precisão requer atentar para duas camadas distintas: a camada coletiva, onde a conservação é absoluta, e a camada individual, onde a redistribuição é governada por duas equações precisas.</p>
 
 <h3>A Camada Coletiva: Conservação Absoluta</h3>
 
@@ -727,37 +727,96 @@ $$\Delta B_{\text{tot}} = -\Delta C > 0, \qquad \Delta I_{\text{tot}} = +\Delta 
 <p><strong>Desfazer:</strong> A influência de cada participante converte-se em saldo. O saldo coletivo recupera \(C(\mathbf{q}_m)\) exatamente.</p>
 $$\Delta B_{\text{tot}} = +C(\mathbf{q}_m), \qquad \Delta I_{\text{tot}} = -C(\mathbf{q}_m), \qquad \Delta B_{\text{tot}} + \Delta I_{\text{tot}} = 0 \checkmark$$
 
-<h3>A Camada Individual: Redistribuição Governada pela Equação Fundamental</h3>
+<p>O que a lei de conservação vincula, e o que ela não vincula:</p>
 
-<p>A lei de conservação coletiva é absoluta. No nível individual, toda Tomada é governada por uma única equação que relaciona precisamente as duas condições que poderiam parecer se separar — a neutralidade financeira e a neutralidade de poder.</p>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>O que a conservação vincula</th><th>O que ela não vincula</th></tr></thead>
+  <tbody>
+    <tr><td>\(\sum_i \Delta P_i = 0\) — absoluto</td><td>\(\Delta P_t = 0\) para qualquer indivíduo — não exigido</td></tr>
+    <tr><td>\(\sum_i \Delta B_i = -\Delta C\) — exato</td><td>\(\Delta C = 0\) — não exigido</td></tr>
+    <tr><td>\(\sum_i \Delta I_i = +\Delta C\) — exato</td><td>\(\Delta I_t = 0\) — não exigido</td></tr>
+  </tbody>
+</table>
+</div>
 
-<p>Para o tomador que transaciona, com posição prévia \(\mathbf{q}_t\) executando \(\Delta\mathbf{q}\), defina a variação de influência como:</p>
+<p>A lei de conservação é o teto e o piso simultaneamente — ela limita a criação total a zero e a destruição total a zero. Dentro dessa restrição, os termos individuais de poder são livres para assumir quaisquer valores que a geometria da negociação produza.</p>
 
-$$\Delta I_t = \nabla C(\mathbf{q}_m + \Delta\mathbf{q}) \cdot (\mathbf{q}_t + \Delta\mathbf{q}) - \nabla C(\mathbf{q}_m) \cdot \mathbf{q}_t$$
+<h3>A Camada Individual: Duas Equações Governantes</h3>
 
-<p>Esta é a reprecificação de toda a posição resultante do tomador ao novo gradiente. A <strong>equação fundamental</strong> do poder individual em uma Tomada é então:</p>
+<p>A lei de conservação coletiva é absoluta. No nível individual, toda Tomada é governada por <strong>duas equações</strong> que, juntas, constituem uma prestação de contas completa de como o poder flui entre os participantes.</p>
+
+<p><strong>Para o tomador que transaciona</strong> com posição prévia \(\mathbf{q}_t\) executando \(\Delta\mathbf{q}\):</p>
 
 <div class="axiom">
-  <div class="axiom-label">Equação Fundamental do Poder Individual</div>
+  <div class="axiom-label">Equação 1 — A Constituição do Tomador</div>
   $$\Delta P_t = -\Delta C + \Delta I_t$$
 </div>
 
-<p>Esta única equação governa ambas as condições de interesse:</p>
+<p>onde \(\Delta I_t = \nabla C(\mathbf{q}_m + \Delta\mathbf{q}) \cdot (\mathbf{q}_t + \Delta\mathbf{q}) - \nabla C(\mathbf{q}_m) \cdot \mathbf{q}_t\).</p>
 
-$$\Delta C = 0 \implies \Delta P_t = \Delta I_t$$
-$$\Delta P_t = 0 \implies \Delta C = \Delta I_t$$
+<p>O saldo varia por \(-\Delta C\). A influência varia por \(\Delta I_t\). Ambos os termos são, em geral, não nulos. Esta é a identidade contábil primária para o tomador — não um resultado derivado, mas a definição direta do que uma Tomada faz ao poder de um tomador.</p>
 
-<p>Nenhuma das condições implica a outra. Mas elas não são livres para variar independentemente — ambas são determinadas pela mesma negociação \(\Delta\mathbf{q}\) contra o mesmo estado de mercado \(\mathbf{q}_m\) e a mesma posição prévia \(\mathbf{q}_t\). Alterar \(\Delta\mathbf{q}\) altera ambas simultaneamente por meio de \(C\).</p>
+<p><strong>Para todos os demais participantes \(i \neq t\)</strong> — tanto o criador quanto todos os tomadores existentes:</p>
 
-<p><strong>\(\Delta C = 0\)</strong> significa que o mercado não se moveu em custo. O saldo do tomador permanece inalterado. Mas o gradiente mudou — as probabilidades implícitas são diferentes — e cada posição no mercado é reprecificada. A variação de poder do tomador iguala sua variação de influência: \(\Delta P_t = \Delta I_t\). Isso é genericamente não nulo; \(\Delta C = 0\) fixa a troca financeira mas deixa livre o termo de reprecificação.</p>
+<div class="axiom">
+  <div class="axiom-label">Equação 2 — Reprecificação Pura</div>
+  $$\Delta P_i = \Delta I_i$$
+</div>
 
-<p><strong>\(\Delta P_t = 0\)</strong> significa que o poder do tomador permanece inalterado. O custo pago iguala a influência ganha: \(\Delta C = \Delta I_t\). O saldo entregue foi exatamente compensado pelo valor da posição adquirida aos preços correntes. Esta é a condição para uma negociação "precificada de forma justa" no sentido da contabilidade de poder. É uma condição geométrica específica sobre a estrutura conjunta de \(\Delta\mathbf{q}\), \(\mathbf{q}_t\) e \(\mathbf{q}_m\) — satisfazível por construção deliberada, mas não o resultado genérico.</p>
+<p>Seu saldo permanece intocado — \(\Delta B_i = 0\) exatamente. Sua variação de poder é reprecificação pura, sem nenhum componente financeiro. Eles não transacionaram. O mercado se moveu sob eles, e suas posições foram revalorizadas pelo gradiente que o tomador criou.</p>
 
-<p>A conservação total também revela a estrutura quando cada condição é imposta:</p>
+<p>Para o criador com influência residual \(C(\mathbf{q}_m) - \nabla C(\mathbf{q}_m) \cdot \mathbf{q}_m\):</p>
 
-<p><strong>Quando \(\Delta C = 0\):</strong> \(\sum_i \Delta I_i = 0\). A influência total permanece inalterada, mas esse zero é distribuído de forma não trivial — alguns participantes ganham influência, outros a perdem. O \(\Delta I_t\) do tomador não precisa ser zero, ainda que o total o seja. A conservação total restringe a soma; nada diz sobre qualquer termo individual.</p>
+$$\Delta I_A = [C(\mathbf{q}') - \nabla C(\mathbf{q}') \cdot \mathbf{q}'] - [C(\mathbf{q}_m) - \nabla C(\mathbf{q}_m) \cdot \mathbf{q}_m]$$
 
-<p><strong>Quando \(\Delta P_t = 0\):</strong> \(\sum_{i \neq t} \Delta P_i = 0\). O poder total de todos os demais participantes também permanece inalterado como soma — mas, novamente, os termos individuais não precisam ser zero. O poder circula entre os participantes que não transacionam mesmo quando o tomador que transaciona empata.</p>
+<p>Para qualquer tomador existente \(s \neq t\) com posição \(\mathbf{q}_s\):</p>
+
+$$\Delta I_s = [\nabla C(\mathbf{q}') - \nabla C(\mathbf{q}_m)] \cdot \mathbf{q}_s$$
+
+<p>A conservação é verificada por meio dessas duas equações em conjunto com a identidade \(\sum_i \Delta I_i = \Delta C\):</p>
+
+$$\sum_i \Delta P_i = \underbrace{(-\Delta C + \Delta I_t)}_{\text{tomador}} + \underbrace{\sum_{i \neq t} \Delta I_i}_{\text{todos os demais}} = -\Delta C + \sum_i \Delta I_i = -\Delta C + \Delta C = 0 \checkmark$$
+
+<p>As duas equações governantes não são meramente consistentes com a conservação; em conjunto com esta identidade, elas a constituem.</p>
+
+<p>O quadro completo em qualquer Tomada:</p>
+
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Participante</th><th>\(\Delta B\)</th><th>\(\Delta I\)</th><th>\(\Delta P\)</th><th>Fonte da variação</th></tr></thead>
+  <tbody>
+    <tr><td>Tomador que transaciona</td><td class="num">\(-\Delta C\)</td><td class="num">\(\Delta I_t\)</td><td class="num">\(-\Delta C + \Delta I_t\)</td><td>Troca financeira e reprecificação da posição resultante</td></tr>
+    <tr><td>Criador</td><td class="num zero">\(0\)</td><td class="num">\(\Delta I_A\)</td><td class="num">\(\Delta I_A\)</td><td>Reprecificação pura da reivindicação residual</td></tr>
+    <tr><td>Todos os demais tomadores</td><td class="num zero">\(0\)</td><td class="num">\(\Delta I_s\)</td><td class="num">\(\Delta I_s\)</td><td>Reprecificação pura das posições detidas</td></tr>
+    <tr><td><strong>Sistema</strong></td><td class="num">\(-\Delta C\)</td><td class="num">\(+\Delta C\)</td><td class="num zero">\(0\)</td><td>Conservação</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Como as Crenças São Confirmadas pela Atividade Subsequente</h3>
+
+<p>Para um participante \(s\) que não transaciona, detendo a posição \(\mathbf{q}_s\):</p>
+
+$$\Delta P_s = [\nabla C(\mathbf{q}') - \nabla C(\mathbf{q}_m)] \cdot \mathbf{q}_s$$
+
+<p>Este é o produto escalar do deslocamento do gradiente com seu vetor de posição. Seu sinal e magnitude dependem inteiramente de as negociações subsequentes moverem as probabilidades implícitas em direção aos resultados que ele detém ou para longe deles.</p>
+
+<p>Se o participante \(s\) detém \(\omega_i\) e um tomador subsequente compra \(\omega_i\): \(\pi_i\) sobe, \(\frac{\partial C}{\partial q_i}\) sobe, \(\Delta P_s &gt; 0\).</p>
+
+<p>Se o participante \(s\) detém \(\omega_i\) e um tomador subsequente compra \(\omega_j \neq i\): \(\pi_i\) cai, \(\Delta P_s &lt; 0\).</p>
+
+<p>O poder flui contínua e automaticamente em direção às posições que a atividade subsequente do mercado valida. Não há evento de resolução, nem julgamento, nem oráculo. O mercado reprecifica a cada Tomada, e o poder se redistribui a cada reprecificação.</p>
+
+<h3>A Constituição do Tomador e Suas Duas Condições</h3>
+
+<p>A equação do tomador \(\Delta P_t = -\Delta C + \Delta I_t\) governa diretamente as duas condições de interesse:</p>
+
+<p><strong>\(\Delta C = 0 \implies \Delta P_t = \Delta I_t\).</strong> A neutralidade financeira elimina o termo financeiro. O que resta é reprecificação pura. O poder do tomador varia exatamente pelo montante que sua posição resultante ganhou ou perdeu em valor quando o gradiente se deslocou. Isso é genericamente não nulo — é zero apenas se o novo gradiente valoriza a posição resultante de forma idêntica a como o gradiente antigo valorizava a posição prévia, uma coincidência geométrica.</p>
+
+<p><strong>\(\Delta P_t = 0 \implies \Delta C = \Delta I_t\).</strong> A neutralidade de poder requer que o termo financeiro iguale o termo de reprecificação exatamente. O tomador paga precisamente o que o mercado diz que sua posição vale no novo estado, líquido do antigo. Esta é a condição para uma negociação "precificada de forma justa" no sentido da contabilidade de poder — uma condição geométrica distinta, não uma garantia estrutural.</p>
+
+<p>Nenhuma das condições implica a outra. Ambas são funções da mesma negociação \(\Delta\mathbf{q}\), ligadas pela mesma equação. Alterar \(\Delta\mathbf{q}\) altera ambas simultaneamente por meio de \(C\).</p>
 
 <p><strong>Criar</strong> é pessoal tanto em escopo quanto em efeito. O criador paga \(L\) do saldo e ganha exatamente \(L\) em influência. Nenhum outro participante existe nesta operação.</p>
 
@@ -765,34 +824,24 @@ $$\Delta P_m = 0 \quad \text{(apenas o criador; os demais intocados)}$$
 
 <p><strong>Desfazer</strong> é social em escopo, mas pessoal em efeito. Para cada participante \(i\): \(\Delta B_i = +I_i\), \(\Delta I_i = -I_i\), \(\Delta P_i = 0\). A conservação individual se mantém exatamente em Desfazer.</p>
 
-<p>Os dois níveis de conservação são, portanto:</p>
+<p>Os dois níveis de conservação:</p>
 
 <div class="table-wrap">
 <table>
   <thead><tr><th>Nível</th><th>Enunciado</th><th>Status</th></tr></thead>
   <tbody>
-    <tr><td><strong>Sistema</strong></td><td>\(\sum_i \Delta P_i = 0\) em toda Tomada</td><td><strong>Absoluto</strong> — sem exceções, sem casos extremos</td></tr>
-    <tr><td><strong>Individual</strong></td><td>\(\Delta P_i \neq 0\) na maioria das Tomadas</td><td><strong>Genérico</strong> — zero requer \(\Delta C = \Delta I_t\) exatamente</td></tr>
+    <tr><td><strong>Sistema</strong></td><td>\(\sum_i \Delta P_i = 0\) em toda Tomada</td><td><strong>Absoluto</strong> — sem exceções</td></tr>
+    <tr><td><strong>Tomador individual</strong></td><td>\(\Delta P_t = -\Delta C + \Delta I_t\); genericamente \(\neq 0\)</td><td><strong>Identidade primária</strong> — zero requer \(\Delta C = \Delta I_t\) exatamente</td></tr>
+    <tr><td><strong>Não transacionantes</strong></td><td>\(\Delta P_i = \Delta I_i\); genericamente \(\neq 0\)</td><td><strong>Reprecificação pura</strong> — sem componente financeiro</td></tr>
   </tbody>
 </table>
 </div>
 
-<p>O ciclo de vida de uma posição torna isso concreto:</p>
+<p>O ciclo de vida de uma posição:</p>
 
-$$\underbrace{B_t \leftarrow B_t - \Delta C}_{\substack{\text{paga se } \Delta C > 0 \\ \text{sem troca se } \Delta C = 0 \\ \text{recebe se } \Delta C < 0}} \;\longrightarrow\; \underbrace{\text{Detém } \mathbf{q}_t}_{\substack{\text{influência reprecificada} \\ \text{a partir da entrada}}} \;\longrightarrow\; \underbrace{\text{Recebe } \nabla C(\mathbf{q}_m) \cdot \mathbf{q}_t}_{\text{Desfazer: conservação individual exata}}$$
+$$\underbrace{B_t \leftarrow B_t - \Delta C}_{\substack{\text{paga se } \Delta C > 0 \\ \text{sem troca se } \Delta C = 0 \\ \text{recebe se } \Delta C < 0}} \;\longrightarrow\; \underbrace{\text{Detém } \mathbf{q}_t}_{\substack{\text{reprecificada a cada} \\ \text{Tomada subsequente}}} \;\longrightarrow\; \underbrace{\text{Recebe } \nabla C(\mathbf{q}_m) \cdot \mathbf{q}_t}_{\text{Desfazer: conservação individual exata}}$$
 
-<div class="table-wrap">
-<table>
-  <thead><tr><th>Operação</th><th>\(\Delta B_{\text{tot}} + \Delta I_{\text{tot}}\)</th><th>\(\Delta P_i\) individual</th><th>\(\Delta P\) do sistema</th><th>Mecanismo</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Criar</strong></td><td class="num zero">\(= 0\)</td><td>\(0\) para o criador; os demais intocados</td><td class="num zero">\(0\)</td><td>Conversão pessoal \(B \to I\)</td></tr>
-    <tr><td><strong>Tomar</strong></td><td class="num zero">\(= 0\) (absoluto)</td><td>Governado por \(\Delta P_t = -\Delta C + \Delta I_t\); genericamente \(\neq 0\)</td><td class="num zero">\(0\) (absoluto)</td><td>Redistribuição entre participantes</td></tr>
-    <tr><td><strong>Desfazer</strong></td><td class="num zero">\(= 0\)</td><td>\(0\) para todos os participantes (exato)</td><td class="num zero">\(0\)</td><td>Conversão pessoal \(I \to B\) para todos simultaneamente</td></tr>
-  </tbody>
-</table>
-</div>
-
-<p>Tomar é a única operação onde o poder <strong>cruza entre participantes</strong>. Criar constrói a arena. Desfazer a dissolve. Tomar é onde ocorre a contenda epistêmica e econômica de fato.</p>
+<p>Tomar é a única operação onde o poder <strong>cruza entre participantes</strong>. Criar constrói a arena. Desfazer a dissolve. Tomar é onde ocorre a contenda epistêmica e econômica de fato: o tomador paga para mover o mercado; todos os demais simplesmente assistem suas posições serem revalorizadas pelo gradiente que o tomador criou.</p>
 
 <h3>O Princípio Constitucional</h3>
 
@@ -918,7 +967,14 @@ $$B_B \leftarrow 1,0000 - 0,7877 = \mathbf{0,2123}$$
 $$\pi_1 = \frac{0,6 \cdot e^2}{4,8335} = \frac{4,4335}{4,8335} = \mathbf{0,9173} \quad (91{,}73\%)$$
 $$\pi_2 = \frac{0,4}{4,8335} = \mathbf{0,0827} \quad (8{,}27\%)$$
 
-<p>O capital comprometido de Bob elevou a probabilidade implícita do mercado de "Sim" de <strong>60% para 91,73%</strong>. Na camada coletiva: o pagamento de Bob financia um aumento de \(+0,7877\) no pool. O pool agora totaliza \(C(1,0) = 1,2458 = L + \Delta C_B = 0,4581 + 0,7877\). Na camada individual: a influência de criadora de Alice cai de \(0,4581\) para \(0,3285\), transferindo poder para Bob sem que Alice transacione.</p>
+<p>O capital comprometido de Bob elevou a probabilidade implícita do mercado de "Sim" de <strong>60% para 91,73%</strong>. Na camada coletiva: o pagamento de Bob financia um aumento de \(+0,7877\) no pool. Na camada individual, as duas equações operam:</p>
+
+<ul>
+  <li><strong>Bob</strong> (tomador que transaciona): \(\Delta P_B = -0,7877 + \Delta I_B\). Sua nova posição \((1,0)\) é valorizada em \(0,9173\); sua posição prévia era \(0\). Logo \(\Delta I_B = 0,9173\), e \(\Delta P_B = -0,7877 + 0,9173 = +0,1296\).</li>
+  <li><strong>Alice</strong> (criadora não transacionante): \(\Delta P_A = \Delta I_A\). Sua reivindicação residual cai de \(0,4581\) para \(1,2458 - 0,9173 = 0,3285\). Logo \(\Delta P_A = 0,3285 - 0,4581 = -0,1296\).</li>
+</ul>
+
+<p>O poder de Alice não variou porque ela transacionou — variou porque o gradiente se moveu, e sua posição foi reprecificada sob ela.</p>
 
 <div class="phase">
   <div class="phase-tag">Passo 3</div>
@@ -933,7 +989,7 @@ $$C(1,1) = 0,4581 + 0,5 \cdot \ln\!\left(e^2 \cdot (0,6 + 0,4)\right) = 0,4581 +
 
 <p><strong>Custo da negociação de Carol:</strong> \(\Delta C_C = 1,4581 - 1,2458 = \mathbf{0,2123}\)</p>
 
-<p>Compra pura (\(\Delta C &gt; 0\)): Carol paga \(0,2123\) ao mercado. O pool agora totaliza \(C(1,1) = 1,4581 = 0,4581 + 0,7877 + 0,2123\). Carol entrou no estado \((1,0)\). A história anterior do mercado, incluindo a distorção de Bob para 91,73%, não é sua herança. Ela pagou \(0,2123\) por uma posição imediatamente valendo \(\nabla C(1,1) \cdot (0,1) = 0,4000\): seu deslocamento da própria Tomada é \(+0,1877\), proveniente da contração da fração do pool de Bob à medida que o gradiente foi restaurado.</p>
+<p>Compra pura (\(\Delta C &gt; 0\)): Carol paga \(0,2123\) ao mercado. O pool agora totaliza \(C(1,1) = 1,4581 = 0,4581 + 0,7877 + 0,2123\). Carol entrou no estado \((1,0)\). A história anterior do mercado, incluindo a distorção de Bob para 91,73%, não é sua herança. Pela constituição do tomador: \(\Delta P_C = -0,2123 + (0,4000 - 0) = +0,1877\). Pela equação dos não transacionantes: a posição de Bob \((1,0)\) agora é valorizada em \(0,6000\) em vez de \(0,9173\), logo \(\Delta P_B = 0,6000 - 0,9173 = -0,3173\).</p>
 
 $$B_C \leftarrow 1,0000 - 0,2123 = \mathbf{0,7877}$$
 
@@ -974,21 +1030,21 @@ $$\text{Total: } 1,0000 + 0,8123 + 1,1877 = \mathbf{3,0000} \checkmark$$
 </div>
 <div class="scroll-hint show">← role horizontalmente →</div>
 
-<p>Criar e Desfazer deixam cada linha inalterada — ambos conservam o poder individual. Ambas as Tomadas deslocam linhas individuais mantendo fixa a soma da coluna pela lei absoluta de conservação do sistema. A linha de Desfazer é idêntica à linha acima dela porque Desfazer converte; não redistribui.</p>
+<p>Criar e Desfazer deixam cada linha inalterada. Ambas as Tomadas deslocam linhas individuais mantendo fixa a soma da coluna pela lei absoluta de conservação do sistema. A linha de Desfazer é idêntica à linha acima dela porque Desfazer converte; não redistribui.</p>
 
 <div class="table-wrap">
 <table>
   <thead><tr><th>Agente</th><th>Pagou</th><th>Recebeu</th><th>\(\Delta P\) líquido</th><th>Mecanismo</th></tr></thead>
   <tbody>
     <tr><td>Alice</td><td class="num">0,4581</td><td class="num">0,4581</td><td class="num zero"><strong>0</strong></td><td>Mercado simétrico no fechamento</td></tr>
-    <tr><td>Bob</td><td class="num">0,7877</td><td class="num">0,6000</td><td class="num neg"><strong>−0,1877</strong></td><td>Pagou mais que o valor corrente: custo de impacto de preço liquidado nas Tomadas</td></tr>
-    <tr><td>Carol</td><td class="num">0,2123</td><td class="num">0,4000</td><td class="num pos"><strong>+0,1877</strong></td><td>Pagou menos que o valor corrente: desconto colhido nas Tomadas</td></tr>
+    <tr><td>Bob</td><td class="num">0,7877</td><td class="num">0,6000</td><td class="num neg"><strong>−0,1877</strong></td><td>\(\Delta P = -\Delta C + \Delta I_t\); reprecificação liquidada contra ele</td></tr>
+    <tr><td>Carol</td><td class="num">0,2123</td><td class="num">0,4000</td><td class="num pos"><strong>+0,1877</strong></td><td>\(\Delta P = -\Delta C + \Delta I_t\); reprecificação liquidada a seu favor</td></tr>
   </tbody>
 </table>
 </div>
 
 <div class="pullquote">
-  O poder flui em direção àqueles cujas crenças são confirmadas pela atividade subsequente do mercado — e flui inteiramente através de Tomar.
+  O poder flui em direção àqueles cujas crenças são confirmadas pela atividade subsequente do mercado — governado a cada passo por \(\Delta P_t = -\Delta C + \Delta I_t\) para o tomador que transaciona e \(\Delta P_i = \Delta I_i\) para todos os demais.
 </div>
 
 <div class="ornament">◆ ◆ ◆</div>
@@ -996,7 +1052,7 @@ $$\text{Total: } 1,0000 + 0,8123 + 1,1877 = \mathbf{3,0000} \checkmark$$
 <!-- Seção VII -->
 <h2 id="sec-7"><span class="roman">VII</span>Simulação Estendida — O Mercado do Projeto de Infraestrutura</h2>
 
-<p>O exemplo precedente estabeleceu a mecânica central com três participantes e uma conclusão simétrica. A simulação a seguir introduz fenômenos adicionais: <strong>aplicação de restrição de capital contra negociações subfinanciadas</strong>, o <strong>subsídio do criador como característica estrutural</strong> revelado por fechamento prematuro, <strong>precificação dependente do caminho</strong> demonstrada rigorosamente, e os dois casos faltantes de Tomar — <strong>negociação mista de custo zero</strong> e <strong>liquidação</strong> — demonstrados com contabilidade completa de poder.</p>
+<p>O exemplo precedente estabeleceu a mecânica central com três participantes e uma conclusão simétrica. A simulação a seguir introduz fenômenos adicionais: <strong>aplicação de restrição de capital contra negociações subfinanciadas</strong>, o <strong>subsídio do criador como característica estrutural</strong> revelado por fechamento prematuro, <strong>precificação dependente do caminho</strong> demonstrada rigorosamente, e os dois casos faltantes de Tomar — <strong>negociação mista de custo zero</strong> e <strong>liquidação</strong> — demonstrados com contabilidade completa de poder por meio de ambas as equações governantes.</p>
 
 <h3>O Cenário</h3>
 <p><strong>Pergunta do Mercado:</strong> <em>"O Projeto de Infraestrutura Será Aprovado?"</em></p>
@@ -1047,7 +1103,14 @@ $$\Delta C_{\text{Bob}} = \mathbf{0,5231}, \qquad B_B \leftarrow 1,0000 - 0,5231
 
 $$\pi_1 = \mathbf{0,6444}, \qquad \pi_2 = \mathbf{0,3556}$$
 
-<p>O pool coletivo cresce para \(C(1,0) = 1,4394 = 0,9163 + 0,5231\). A influência de criadora de Alice cai de \(0,9163\) para \(0,7950\), seu poder de \(1,0000\) para \(0,8787\).</p>
+<p>O pool coletivo cresce para \(C(1,0) = 1,4394 = 0,9163 + 0,5231\). As duas equações governantes:</p>
+
+<ul>
+  <li><strong>Bob</strong> (tomador que transaciona): \(\Delta P_B = -0,5231 + (0,6444 - 0) = +0,1213\)</li>
+  <li><strong>Alice</strong> (criadora não transacionante): \(\Delta P_A = \Delta I_A = 0,7950 - 0,9163 = -0,1213\)</li>
+</ul>
+
+<p>O poder de Alice caiu \(0,1213\) porque o gradiente se moveu e sua reivindicação residual foi reprecificada para baixo. Ela não transacionou. O mercado se moveu sob ela.</p>
 
 <p><strong>Verificação da conservação do poder:</strong></p>
 
@@ -1082,7 +1145,15 @@ $$\Delta C_{\text{Carol}} = \mathbf{0,4769}, \qquad B_C \leftarrow 1,0000 - 0,47
 
 $$\pi_1 = \mathbf{0,4000}, \qquad \pi_2 = \mathbf{0,6000}$$
 
-<p>Carol entrou no estado \((1,0)\). A história anterior do mercado não é sua herança. Ela pagou \(0,4769\) por uma posição imediatamente valendo \(0,6000\): \(\Delta P_C^{\text{próprio}} = +0,1231\), proveniente da contração da fração do pool de Bob à medida que o gradiente foi restaurado. O mercado retorna exatamente à a priori, e a influência de criadora de Alice é restaurada a \(1,9163 - 1,0000 = 0,9163 = L\), seu poder recuperando-se plenamente a \(1,0000\).</p>
+<p>As duas equações governantes:</p>
+
+<ul>
+  <li><strong>Carol</strong> (tomadora que transaciona): \(\Delta P_C = -0,4769 + (0,6000 - 0) = +0,1231\)</li>
+  <li><strong>Bob</strong> (tomador não transacionante): \(\Delta P_B = \Delta I_B = (0,4000 - 0,6444) \times 1 = -0,2444\)</li>
+  <li><strong>Alice</strong> (criadora não transacionante): \(\Delta P_A = \Delta I_A = 0,9163 - 0,7950 = +0,1213\)</li>
+</ul>
+
+<p>Carol entrou no estado \((1,0)\). A história anterior do mercado não é sua herança. Ela pagou para mover o mercado; Bob assistiu sua posição ser desvalorizada à medida que o gradiente se restaurava à a priori; a reivindicação residual de Alice recuperou-se à medida que o gradiente voltava.</p>
 
 <p><strong>Verificação da conservação do poder:</strong></p>
 
@@ -1143,7 +1214,7 @@ $$\Delta C^{(2)}_{\omega_1} = C(2,0) - C(1,0) = 2,1848 - 1,4394 = \mathbf{0,7454
 </table>
 </div>
 
-<p>Mesmo resultado. Mesma quantidade. A segunda unidade custa <strong>42,5% a mais</strong> que a primeira. A função de custo é estritamente convexa: cada unidade comprada desloca \(\pi_1\) para cima, tornando compras adicionais mais caras. Essa convexidade é também o que produz a cunha em \(\Delta P_t = -\Delta C + \Delta I_t\) — o mesmo mecanismo que torna a segunda unidade mais cara é precisamente o que impede \(\Delta P_t = 0\) no caso genérico.</p>
+<p>Mesmo resultado. Mesma quantidade. A segunda unidade custa <strong>42,5% a mais</strong> que a primeira. A função de custo é estritamente convexa: cada unidade comprada desloca \(\pi_1\) para cima, tornando compras adicionais mais caras. Essa convexidade é também o que produz a cunha em \(\Delta P_t = -\Delta C + \Delta I_t\) que impulsiona a redistribuição de poder — a mesma não linearidade que torna a segunda unidade mais cara é precisamente o que faz com que as variações individuais de poder sejam genericamente não nulas.</p>
 
 <div class="phase">
   <div class="phase-tag">Fase VI</div>
@@ -1162,12 +1233,16 @@ $$\Delta C^{(2)}_{\omega_1} = C(2,0) - C(1,0) = 2,1848 - 1,4394 = \mathbf{0,7454
 
 <p><strong>Restrição de saldo:</strong> \(B_B \geq 0\ \checkmark\) — trivialmente satisfeita; valeria mesmo se \(B_B = 0\).</p>
 
-<p>\(\Delta C = 0\) fixa \(\Delta B_B = 0\) exatamente. Pela equação fundamental: \(\Delta P_B = -\Delta C + \Delta I_B = \Delta I_B\). O gradiente desloca-se de \((0,40; 0,60)\) para \((0,1472; 0,8528)\); a posição resultante de Bob \((0,\ 0,3521)\) é reprecificada ao novo gradiente.</p>
+<p>Pela constituição do tomador com \(\Delta C = 0\): \(\Delta P_B = \Delta I_B\).</p>
 
-$$\Delta I_B = 0,8528 \times 0,3521 - 0,40 \times 1 - 0,60 \times 0 = 0,3002 - 0,4000 = -0,0998$$
+<p>O gradiente desloca-se de \((0,40; 0,60)\) para \((0,1472; 0,8528)\). A posição resultante de Bob é \((0,\ 0,3521)\):</p>
+
+$$\Delta I_B = 0,8528 \times 0,3521 - (0,40 \times 1 + 0,60 \times 0) = 0,3002 - 0,4000 = -0,0998$$
 $$\Delta P_B = -0 + (-0,0998) = \mathbf{-0,0998}$$
 
-<p>Bob não pagou nada. Bob não recebeu nada. Ainda assim, seu poder caiu \(0,0998\). Isso confirma que \(\Delta C = 0\) não implica \(\Delta P_t = 0\) — o gradiente se deslocou e o termo de reprecificação \(\Delta I_t\) foi não nulo. Neutralidade financeira não é neutralidade de poder.</p>
+<p>\(\Delta C = 0\) fixou \(\Delta B_B = 0\) exatamente. Não fixou \(\Delta I_B\) — porque o gradiente se deslocou e a posição resultante de Bob foi valorizada a novos preços. Neutralidade financeira não é neutralidade de poder.</p>
+
+<p>Para Alice e Carol (não transacionantes, \(\Delta P_i = \Delta I_i\)): o deslocamento do gradiente reprecifica suas posições, fluindo \(0,2528\) unidades de poder para Carol, vindas de Alice e Bob conjuntamente.</p>
 
 <div class="table-wrap">
 <table>
@@ -1182,7 +1257,7 @@ $$\Delta P_B = -0 + (-0,0998) = \mathbf{-0,0998}$$
 </table>
 </div>
 
-<p>\(0,2528\) unidades de poder fluíram para Carol, vindas de Alice e Bob conjuntamente, sem que nenhum saldo mudasse de mãos. A conservação total é absoluta; o zero é distribuído de forma não trivial — Carol ganha enquanto Alice e Bob perdem.</p>
+<p>Bob não pagou nada. Bob não recebeu nada. O poder fluiu mesmo assim — porque o mercado se moveu, e as posições de Alice e Carol foram reprecificadas pelo gradiente que a negociação de Bob criou.</p>
 
 <h4>Alternativa B — Liquidação Total de Bob (\(\Delta C &lt; 0\))</h4>
 
@@ -1192,16 +1267,18 @@ $$\Delta P_B = -0 + (-0,0998) = \mathbf{-0,0998}$$
 
 $$\Delta C = C(0, 1) - C(1,1) = 1,6245 - 1,9163 = \mathbf{-0,2918}$$
 
-<p><strong>Restrição de saldo:</strong> \(B_B \geq -0,2918\ \checkmark\) — trivialmente satisfeita; o mercado paga Bob. Valeria mesmo se \(B_B = 0\).</p>
+<p><strong>Restrição de saldo:</strong> trivialmente satisfeita; valeria mesmo se \(B_B = 0\).</p>
 
 $$B_B \leftarrow 0,4769 + 0,2918 = \mathbf{0,7687}$$
 
-<p>Bob está mais rico. Pela equação fundamental: \(\Delta P_B = -\Delta C + \Delta I_B = +0,2918 + \Delta I_B\).</p>
+<p>Pela constituição do tomador: \(\Delta P_B = -(-0,2918) + \Delta I_B = +0,2918 + \Delta I_B\).</p>
 
-$$\Delta I_B = \nabla C(0,1) \cdot (0,0) - \nabla C(1,1) \cdot (1,0) = 0 - 0,4000 = -0,4000$$
+<p>A posição resultante de Bob é \((0,0)\): \(I_B\) depois \(= 0\). A influência prévia de Bob era \(0,4000\).</p>
+
+$$\Delta I_B = 0 - 0,4000 = -0,4000$$
 $$\Delta P_B = +0,2918 + (-0,4000) = \mathbf{-0,1082}$$
 
-<p>O saldo de Bob aumentou \(0,2918\). Seu poder, contudo, caiu \(0,1082\) — porque a influência que ele entregou (\(0,4000\)) valia mais do que ele recuperou em saldo (\(0,2918\)). A equação fundamental torna isso transparente: \(\Delta B_B = +0,2918\) e \(\Delta I_B = -0,4000\) combinam-se para resultar em \(\Delta P_B = -0,1082\).</p>
+<p>A equação torna isso transparente: o termo financeiro devolveu \(+0,2918\) ao saldo de Bob, mas o termo de reprecificação removeu \(0,4000\) de sua influência — porque ele entregou uma posição que valia \(0,4000\) aos preços correntes. Benefício financeiro e perda de poder não são contraditórios. São dois termos separados na mesma equação.</p>
 
 <div class="table-wrap">
 <table>
@@ -1228,9 +1305,7 @@ $$\Delta P_B = +0,2918 + (-0,4000) = \mathbf{-0,1082}$$
 </table>
 </div>
 
-<p>A equação fundamental \(\Delta P_t = -\Delta C + \Delta I_t\) torna ambos os resultados transparentes. Na Alternativa A, \(\Delta C = 0\), portanto \(\Delta P_B = \Delta I_B\) diretamente. Na Alternativa B, \(\Delta C &lt; 0\) devolve saldo, mas \(\Delta I_B\) cai ainda mais; o resultado líquido é negativo. Nenhum dos casos alcança \(\Delta P_B = 0\), o que exigiria \(\Delta C = \Delta I_t\) — uma condição geométrica distinta que não foi satisfeita em nenhuma das negociações.</p>
-
-<p>Em ambos os casos \(\sum_i \Delta P_i = 0\): absoluto, sem exceção. O total permaneceu \(4,0000\) ao longo de todo o processo.</p>
+<p>A constituição do tomador torna ambos os resultados imediatos. Na Alternativa A, \(\Delta C = 0\), portanto \(\Delta P_B = \Delta I_B\) — o termo financeiro desaparece e a reprecificação pura permanece. Na Alternativa B, o termo financeiro é positivo (\(+0,2918\)), mas o termo de reprecificação é mais negativo (\(-0,4000\)); o resultado líquido é negativo. Em nenhum dos casos \(\Delta P_B = 0\), o que exigiria \(\Delta C = \Delta I_t\). Em ambos os casos \(\sum_i \Delta P_i = 0\): absoluto, sem exceção.</p>
 
 <h3>Instantâneo de Governança</h3>
 <p>No estado de mercado \(\mathbf{q}_m = (1, 1)\), antes de qualquer negociação da Fase VI ou de Desfazer:</p>
@@ -1307,7 +1382,7 @@ $$B_C \leftarrow 0,5231 + 0,60 \times 1 = \mathbf{1,1231}$$
 </table>
 </div>
 
-<p>Termo subsequente de Bob: \([\nabla C(1,1) - \nabla C(1,0)] \cdot (1,0) = (0,4000 - 0,6444) \times 1 = -0,2444\). O termo subsequente de Carol é zero — nenhuma negociação seguiu sua entrada.</p>
+<p>Termo subsequente de Bob: \([\nabla C(1,1) - \nabla C(1,0)] \cdot (1,0) = (0,4000 - 0,6444) \times 1 = -0,2444\) — reprecificação pura de sua posição inalterada pela negociação subsequente de Carol, governada por \(\Delta P_i = \Delta I_i\). O termo subsequente de Carol é zero — nenhuma negociação seguiu sua entrada.</p>
 
 <h3>Variante — Desfazer Antecipado Após Apenas Bob</h3>
 
@@ -1353,7 +1428,7 @@ $$B_A \leftarrow 0,0837 + 0,7950 = \mathbf{0,8787}, \qquad B_B \leftarrow 0,4769
 </table>
 </div>
 
-<p>A entrada de Carol foi constitucionalmente necessária para que Alice recuperasse seu poder inicial. O sistema não garante esse cancelamento. Ele apenas garante a conservação.</p>
+<p>A entrada de Carol foi constitucionalmente necessária para que Alice recuperasse seu poder inicial. Sem ela, Alice arca permanentemente com todo o custo da negociação informada de Bob. O sistema não garante esse cancelamento. Ele apenas garante a conservação.</p>
 
 <h3>Propriedades Demonstradas</h3>
 
@@ -1362,14 +1437,15 @@ $$B_A \leftarrow 0,0837 + 0,7950 = \mathbf{0,8787}, \qquad B_B \leftarrow 0,4769
   <thead><tr><th>Propriedade</th><th>Onde Observada</th></tr></thead>
   <tbody>
     <tr><td>Criar: pessoal em escopo e efeito</td><td>Fase I: \(P\) de Alice inalterado; os demais não existem na operação</td></tr>
-    <tr><td>Tomar: reprecifica imediatamente a influência do criador</td><td>Fase II: \(P\) de Alice cai de \(1,0000\) para \(0,8787\) sem transacionar</td></tr>
-    <tr><td>Equação fundamental \(\Delta P_t = -\Delta C + \Delta I_t\)</td><td>Fase VI: ambos os casos calculados transparentemente por esta equação</td></tr>
-    <tr><td>\(\Delta C = 0\) implica \(\Delta P_t = \Delta I_t\), não \(\Delta P_t = 0\)</td><td>Fase VI(a): Bob não paga nada; o poder ainda cai \(0,0998\) porque o gradiente se deslocou</td></tr>
-    <tr><td>\(\Delta P_t = 0\) requer \(\Delta C = \Delta I_t\), uma condição geométrica distinta</td><td>Fase VI: nenhum caso a satisfaz; o zero é possível mas exige construção deliberada</td></tr>
-    <tr><td>Conservação do sistema \(\sum_i \Delta P_i = 0\): absoluta</td><td>Cada fase: soma da coluna \(= 4,0000\) sem exceção</td></tr>
-    <tr><td>\(\Delta C = 0\): financeiramente neutro; influência total inalterada; reprecificação individual não nula</td><td>Fase VI(a): \(\sum_i \Delta I_i = 0\) mas \(\Delta I_i\) individual \(\neq 0\)</td></tr>
+    <tr><td>Duas equações governantes em toda Tomada</td><td>Fases II–III: \(\Delta P_t = -\Delta C + \Delta I_t\) para Bob/Carol; \(\Delta P_i = \Delta I_i\) para Alice</td></tr>
+    <tr><td>Participantes não transacionantes reprecificados apenas pelo deslocamento do gradiente</td><td>Fase II: \(P\) de Alice cai de \(1,0000\) para \(0,8787\) sem transacionar; \(\Delta P_A = \Delta I_A\) exatamente</td></tr>
+    <tr><td>Constituição do tomador \(\Delta P_t = -\Delta C + \Delta I_t\) — identidade primária</td><td>Fase VI: ambos os casos calculados diretamente por esta equação</td></tr>
+    <tr><td>\(\Delta C = 0 \implies \Delta P_t = \Delta I_t\) — a neutralidade financeira deixa livre o termo de reprecificação</td><td>Fase VI(a): Bob não paga nada; o poder cai \(0,0998\) porque o gradiente se deslocou</td></tr>
+    <tr><td>\(\Delta P_t = 0 \implies \Delta C = \Delta I_t\) — uma condição geométrica distinta</td><td>Fase VI: nenhum caso a satisfaz; exige construção deliberada</td></tr>
+    <tr><td>Conservação do sistema \(\sum_i \Delta P_i = 0\): absoluta</td><td>Cada fase: \(P_{\text{tot}} = 4,0000\) sem exceção</td></tr>
+    <tr><td>Conservação fechada por \(\sum_i \Delta I_i = \Delta C\)</td><td>Seção da prova: o tomador paga; a influência total sobe exatamente pelo que o tomador pagou</td></tr>
     <tr><td>\(\Delta C &lt; 0\): financeiramente benéfico; o saldo aumenta, o poder pode ainda cair</td><td>Fase VI(b): Bob recebe \(0,2918\), mas perde \(0,1082\) em poder</td></tr>
-    <tr><td>\(\Delta B\) e \(\Delta P\) são grandezas independentes</td><td>Fase VI lado a lado: governadas por \(\Delta P_t = -\Delta C + \Delta I_t\)</td></tr>
+    <tr><td>\(\Delta B\) e \(\Delta P\) são independentes — ambos termos na mesma equação</td><td>Fase VI lado a lado: o termo financeiro e o termo de reprecificação operam independentemente</td></tr>
     <tr><td>Liquidação sempre move o mercado para baixo</td><td>Formal: \(\nabla C &gt; 0\) em todos os pontos; venda pura decresce estritamente \(C\); \(\Delta C &lt; 0\) incondicionalmente</td></tr>
     <tr><td>\(I_{\text{tot}}\) rastreia a profundidade do mercado exatamente</td><td>Ambos os livros-razão: \(I_{\text{tot}} = C(\mathbf{q}_m)\) em cada linha</td></tr>
     <tr><td>\(B_{\text{tot}}\) e \(I_{\text{tot}}\) são imagens espelhadas</td><td>Ambos os livros-razão: sua soma é \(4,0000\) em cada linha</td></tr>
@@ -1379,7 +1455,7 @@ $$B_A \leftarrow 0,0837 + 0,7950 = \mathbf{0,8787}, \qquad B_B \leftarrow 0,4769
     <tr><td>A entrada de Carol é necessária para a recuperação plena de Alice</td><td>Comparação do ciclo de vida: sem Carol, Alice arca com \(-0,1213\) permanentemente</td></tr>
     <tr><td>Crença imposta por capital</td><td>Fase IV: negociação de Dave rejeitada; a crença existe mas carrega zero poder de mercado</td></tr>
     <tr><td>Precificação dependente do caminho</td><td>Fase V: duas negociações sequenciais de 1 unidade em \(\omega_1\) — a primeira custa \(0,5231\), a segunda custa \(0,7454\) — 42,5% mais alto</td></tr>
-    <tr><td>Convexidade é a fonte da redistribuição</td><td>A cunha em \(\Delta P_t = -\Delta C + \Delta I_t\) é produzida pela mesma convexidade que torna a segunda unidade mais cara</td></tr>
+    <tr><td>A convexidade impulsiona a cunha na constituição do tomador</td><td>A mesma não linearidade que torna a segunda unidade mais cara é o que torna \(\Delta P_t \neq 0\) genérico</td></tr>
   </tbody>
 </table>
 </div>
@@ -1389,7 +1465,7 @@ $$B_A \leftarrow 0,0837 + 0,7950 = \mathbf{0,8787}, \qquad B_B \leftarrow 0,4769
 <!-- Seção VIII -->
 <h2 id="sec-8"><span class="roman">VIII</span>Conservação do Poder — Prova Formal</h2>
 
-<p>As simulações precedentes verificaram a conservação numericamente, passo a passo. O que se segue eleva essa verificação a uma prova — estabelecendo que a conservação do sistema é absoluta e caracterizando a camada individual por meio da equação fundamental.</p>
+<p>As simulações precedentes verificaram a conservação numericamente, passo a passo. O que se segue eleva essa verificação a uma prova — estabelecendo que a conservação do sistema é absoluta, derivando as duas equações governantes como a prestação de contas completa do fluxo de poder individual, e caracterizando precisamente o que cada condição de interesse implica e o que não implica.</p>
 
 <h3>O Invariante, Enunciado com Precisão</h3>
 
@@ -1447,43 +1523,45 @@ $$\nabla C(\mathbf{q}_m) \cdot \mathbf{q}_t - \Delta C_t^{\text{líq}} = \underb
 
 <p>Antes de o tomador \(t\) deter qualquer posição, \(\mathbf{q}_t = \mathbf{0}\), de modo que todos os movimentos anteriores do mercado produzem \(\Delta P_t^{\text{passado}} = 0\). A história do mercado antes da entrada é constitucionalmente irrelevante para a liquidação.</p>
 
-<h3>Operação 2: Tomar — A Equação Fundamental e a Conservação do Sistema</h3>
+<h3>Operação 2: Tomar — As Duas Equações Governantes e a Conservação do Sistema</h3>
 
 <p>Seja \(\mathbf{q} \to \mathbf{q}' = \mathbf{q} + \Delta\mathbf{q}\), onde \(\Delta\mathbf{q}\) satisfaz a restrição de posições não negativas.</p>
 
-<p><strong>A equação fundamental para o tomador que transaciona</strong> (posição prévia \(\mathbf{q}_t\)):</p>
+<p><strong>Equação 1 — O tomador que transaciona</strong> (posição prévia \(\mathbf{q}_t\)):</p>
 
 <div class="axiom">
-  <div class="axiom-label">Equação Fundamental</div>
+  <div class="axiom-label">A Constituição do Tomador</div>
   $$\Delta P_t = -\Delta C + \Delta I_t$$
 </div>
 
 <p>onde \(\Delta I_t = \nabla C(\mathbf{q}') \cdot (\mathbf{q}_t + \Delta\mathbf{q}) - \nabla C(\mathbf{q}) \cdot \mathbf{q}_t\).</p>
 
-<p>Esta equação governa a relação entre a neutralidade financeira e a neutralidade de poder:</p>
+<p>Esta é a identidade contábil primária — não um resultado derivado. O termo financeiro \(-\Delta C\) captura a troca de saldo. O termo de reprecificação \(\Delta I_t\) captura a revalorização da posição resultante. Ambos são determinados pelo mesmo \(\Delta\mathbf{q}\) por meio de \(C\).</p>
 
-<ul>
-  <li>\(\Delta C = 0 \implies \Delta P_t = \Delta I_t\) — o saldo permanece inalterado, mas o poder iguala a reprecificação da posição resultante</li>
-  <li>\(\Delta P_t = 0 \implies \Delta C = \Delta I_t\) — o custo pago compensa exatamente a influência ganha</li>
-</ul>
+<p><strong>Equação 2 — Todo participante não transacionante \(i \neq t\)</strong>:</p>
 
-<p>Estas são condições distintas. Ambas são determinadas pela mesma negociação \(\Delta\mathbf{q}\) por meio de \(C\); nenhuma implica a outra.</p>
+<div class="axiom">
+  <div class="axiom-label">Reprecificação Pura</div>
+  $$\Delta P_i = \Delta I_i, \qquad \Delta B_i = 0$$
+</div>
 
-<p><strong>Para o criador</strong> (saldo inalterado):</p>
-$$\Delta P_m = [C(\mathbf{q}') - \nabla C(\mathbf{q}') \cdot \mathbf{q}'] - [C(\mathbf{q}) - \nabla C(\mathbf{q}) \cdot \mathbf{q}]$$
+<p>Para o criador: \(\Delta I_A = [C(\mathbf{q}') - \nabla C(\mathbf{q}') \cdot \mathbf{q}'] - [C(\mathbf{q}) - \nabla C(\mathbf{q}) \cdot \mathbf{q}]\).</p>
 
-<p><strong>Para todos os tomadores existentes</strong> \(s \neq t\) (posições e saldos inalterados):</p>
-$$\Delta P_s = [\nabla C(\mathbf{q}') - \nabla C(\mathbf{q})] \cdot \mathbf{q}_s$$
+<p>Para cada tomador existente \(s \neq t\): \(\Delta I_s = [\nabla C(\mathbf{q}') - \nabla C(\mathbf{q})] \cdot \mathbf{q}_s\).</p>
 
-<p><strong>Conservação do sistema</strong> (absoluta, pelo corolário):</p>
+<p>Suas variações de poder são reprecificação pura. Eles não transacionaram. O gradiente se moveu sob eles.</p>
 
-$$\Delta B_{\text{tot}} = -\Delta C, \qquad \Delta I_{\text{tot}} = +\Delta C, \qquad \sum_i \Delta P_i = 0$$
+<p><strong>A conservação do sistema</strong> decorre de ambas as equações em conjunto com a identidade \(\sum_i \Delta I_i = \Delta C\):</p>
 
-<p>Isto não é uma tendência. Decorre incondicionalmente da definição de \(C\) e das regras de atualização, para toda Tomada, em qualquer direção, de qualquer tamanho. A convexidade estrita de \(C\) produz a cunha:</p>
+$$\sum_i \Delta P_i = (-\Delta C + \Delta I_t) + \sum_{i \neq t} \Delta I_i = -\Delta C + \sum_i \Delta I_i = -\Delta C + \Delta C = 0$$
+
+<p>Isto é absoluto — decorre incondicionalmente da definição de \(C\) e das regras de atualização, para toda Tomada, em qualquer direção, de qualquer tamanho. As duas equações governantes não são meramente consistentes com a conservação; em conjunto com esta identidade, elas a constituem.</p>
+
+<p>A convexidade estrita de \(C\) produz a cunha que torna a redistribuição genérica:</p>
 
 $$\nabla C(\mathbf{q}) \cdot \Delta\mathbf{q} < C(\mathbf{q}') - C(\mathbf{q}) < \nabla C(\mathbf{q}') \cdot \Delta\mathbf{q} \quad \text{(para } \Delta C \neq 0 \text{ não trivial)}$$
 
-<p>Essa cunha é simultaneamente o que gera a redistribuição entre participantes individuais e o que produz a precificação dependente do caminho — a mesma não linearidade em \(C\) que torna a segunda unidade de qualquer resultado mais cara que a primeira.</p>
+<p>Para negociações de custo zero (\(\Delta C = 0\)), a redistribuição ainda ocorre por meio dos termos de reprecificação. Em todos os casos, \(\sum_i \Delta P_i = 0\).</p>
 
 <h3>A Taxonomia Completa</h3>
 
@@ -1492,7 +1570,7 @@ $$\nabla C(\mathbf{q}) \cdot \Delta\mathbf{q} < C(\mathbf{q}') - C(\mathbf{q}) <
   <thead><tr><th>Operação</th><th>\(\Delta B_{\text{tot}} + \Delta I_{\text{tot}}\)</th><th>\(\Delta P_i\) individual</th><th>\(\Delta P\) do sistema</th><th>Mecanismo</th></tr></thead>
   <tbody>
     <tr><td><strong>Criar</strong></td><td class="num zero">\(= 0\)</td><td>\(0\) para o criador; os demais intocados</td><td class="num zero">\(0\)</td><td>Estabelece o pool em \(L\); conversão pessoal \(B \to I\)</td></tr>
-    <tr><td><strong>Tomar</strong></td><td class="num zero">\(= 0\) (absoluto)</td><td>Governado por \(\Delta P_t = -\Delta C + \Delta I_t\); genericamente \(\neq 0\)</td><td class="num zero">\(0\) (absoluto)</td><td>Redistribuição entre participantes</td></tr>
+    <tr><td><strong>Tomar</strong></td><td class="num zero">\(= 0\) (absoluto)</td><td>Tomador: \(-\Delta C + \Delta I_t\); demais: \(\Delta I_i\); genericamente \(\neq 0\)</td><td class="num zero">\(0\) (absoluto)</td><td>O tomador paga para mover o mercado; todos os demais reprecificados pelo gradiente que ele cria</td></tr>
     <tr><td><strong>Desfazer</strong></td><td class="num zero">\(= 0\)</td><td>\(0\) para todos os participantes (exato)</td><td class="num zero">\(0\)</td><td>Conversão pessoal \(I \to B\) para todos simultaneamente</td></tr>
   </tbody>
 </table>
@@ -1510,7 +1588,7 @@ $$\nabla C(\mathbf{q}) \cdot \Delta\mathbf{q} < C(\mathbf{q}') - C(\mathbf{q}) <
   <strong>A verdade, no Probabilize, é escassa. E a escassez é imposta por esta lei.</strong>
 </div>
 
-<p>A equação fundamental \(\Delta P_t = -\Delta C + \Delta I_t\) é a constituição do tomador individual em toda Tomada. Ela diz: seu poder varia pelo que você recebe na reprecificação, líquido do que você paga. A neutralidade financeira (\(\Delta C = 0\)) não produz neutralidade de poder a menos que a reprecificação se cancele exatamente. A neutralidade de poder (\(\Delta P_t = 0\)) não requer neutralidade financeira — requer que custo e reprecificação sejam precisamente iguais. Estas são condições geométricas distintas sobre a mesma negociação, ligadas pela mesma função de custo, impostas pela mesma lei de conservação que vincula sua soma a zero.</p>
+<p>O poder flui em direção àqueles cujas crenças são confirmadas pela atividade subsequente do mercado. Ele flui inteiramente através de Tomar — nunca através de Criar, nunca através de Desfazer — e é governado a cada passo por \(\Delta P_t = -\Delta C + \Delta I_t\) para o tomador que transaciona e \(\Delta P_i = \Delta I_i\) para todo outro participante. O tomador paga para mover o mercado; todos os demais simplesmente assistem suas posições serem revalorizadas pelo gradiente que o tomador criou. A lei de conservação se fecha porque a influência total criada pelo pagamento do tomador é exatamente redistribuída entre todos os participantes por meio da reprecificação. Nenhum poder é criado. Nenhum poder é destruído. Ele flui.</p>
 
 <div class="ornament">◆ ◆ ◆</div>
 
@@ -1524,10 +1602,10 @@ $$\nabla C(\mathbf{q}) \cdot \Delta\mathbf{q} < C(\mathbf{q}') - C(\mathbf{q}) <
     <tr><td><strong>Saldo</strong></td><td>Sua capacidade econômica líquida corrente; limita a compra; recuperável por liquidação</td></tr>
     <tr><td><strong>Mercado</strong></td><td>Uma pergunta probabilística capitalizada</td></tr>
     <tr><td><strong>Criar</strong></td><td>Criar um mercado; definir probabilidades a priori; estabelecer o pool coletivo em \(L\); conversão pessoal \(B \to I\)</td></tr>
-    <tr><td><strong>Tomar</strong></td><td>Comprar ou vender uma posição; governado por \(\Delta P_t = -\Delta C + \Delta I_t\); poder do sistema conservado absolutamente; poder individual genericamente redistribuído; \(\Delta C = 0\) é financeiramente neutro mas não neutro em poder; \(\Delta P_t = 0\) requer \(\Delta C = \Delta I_t\) exatamente</td></tr>
+    <tr><td><strong>Tomar</strong></td><td>Comprar ou vender uma posição; tomador governado por \(\Delta P_t = -\Delta C + \Delta I_t\); todos os demais por \(\Delta P_i = \Delta I_i\); poder do sistema conservado absolutamente; \(\sum_i \Delta I_i = \Delta C\) fecha a lei</td></tr>
     <tr><td><strong>Desfazer</strong></td><td>Fechar um mercado; conversão pessoal \(I \to B\) para todos simultaneamente — poder individual conservado exatamente para todos os participantes; todo o pool distribuído</td></tr>
     <tr><td><strong>Influência</strong></td><td>Sua fração do pool coletivo aos preços correntes do mercado; lastreada pela fundação do criador e por todos os pagamentos líquidos dos tomadores juntos; individualmente recuperável por liquidação</td></tr>
-    <tr><td><strong>Poder</strong></td><td>\(P = B + I\) — conservado em todo o sistema de forma absoluta (\(\sum_i \Delta P_i = 0\) sempre); a conservação individual se mantém em Criar e Desfazer exatamente, e em Tomar apenas quando \(\Delta C = \Delta I_t\)</td></tr>
+    <tr><td><strong>Poder</strong></td><td>\(P = B + I\) — conservado em todo o sistema de forma absoluta; em Tomar, \(\Delta P\) do tomador \(= -\Delta C + \Delta I_t\), \(\Delta P\) de todos os demais \(= \Delta I\); flui em direção às crenças confirmadas pela atividade subsequente do mercado</td></tr>
     <tr><td><strong>Governança</strong></td><td>Decisões amostradas das probabilidades implícitas do mercado, ponderadas pela credibilidade</td></tr>
   </tbody>
 </table>
